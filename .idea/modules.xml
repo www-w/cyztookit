@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AndroidStudioProjects.iml" filepath="$PROJECT_DIR$/AndroidStudioProjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CYZ_TOOKIT.iml" filepath="$PROJECT_DIR$/.idea/modules/CYZ_TOOKIT.iml" group="CYZ_TOOKIT" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cyztookit/cyztookit.iml" filepath="$PROJECT_DIR$/.idea/modules/cyztookit/cyztookit.iml" group="CYZ TOOKIT/cyztookit" />
     </modules>
   </component>
 </project>
