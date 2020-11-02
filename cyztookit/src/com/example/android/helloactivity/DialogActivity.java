@@ -30,7 +30,7 @@ import android.content.Intent;
 /**
  * A minimal "Hello, World!" application.
  */
-public class SecondActivity extends Activity {
+public class DialogActivity extends Activity {
     String tag="hello";
     private Button button2;
     /**
@@ -40,19 +40,14 @@ public class SecondActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.second_activity);
-        initView();
-        Intent intent = getIntent();
-        String dat=intent.getStringExtra("ddd");
-        Button btn=(Button)findViewById(R.id.button2);
-        btn.setText(dat);
+        setContentView(R.layout.dialog_activity);
     }
     private void initView(){
         button2=findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Toast.makeText(SecondActivity.this,"提示信息～",Toast.LENGTH_LONG).show();
+                Toast.makeText(DialogActivity.this,"提示信息～",Toast.LENGTH_LONG).show();
                 Intent rr=new Intent();
                 rr.putExtra("rt","来自二号窗口");
                 setResult(RESULT_OK,rr);
@@ -69,10 +64,10 @@ public class SecondActivity extends Activity {
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()){
             case R.id.item1:
-                Toast.makeText(SecondActivity.this,"item1～",Toast.LENGTH_LONG).show();
+                Toast.makeText(DialogActivity.this,"item1～",Toast.LENGTH_LONG).show();
                 break;
             case R.id.item2:
-                Toast.makeText(SecondActivity.this,"item2～",Toast.LENGTH_LONG).show();
+                Toast.makeText(DialogActivity.this,"item2～",Toast.LENGTH_LONG).show();
                 break;
         }
         return super.onOptionsItemSelected(item);

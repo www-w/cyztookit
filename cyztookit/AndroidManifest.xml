@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android.helloactivity">
     <uses-permission android:name="android.permission.CALL_PHONE"/>
-    <application android:label="一个后台程序">
+    <application android:label="一个后台程序" 
+        android:theme="@style/AppTheme"
+        >
         <activity android:name="HelloActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -12,6 +14,13 @@
         <activity android:name="SecondActivity">
             <intent-filter>
                 <action android:name="com.topv1.START_UP"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="DialogActivity"
+            android:theme="@android:style/Theme.Dialog">
+            <intent-filter>
+                <action android:name="com.topv1.START_DIALOG"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
