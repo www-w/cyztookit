@@ -32,7 +32,7 @@ import android.net.Uri;
  * A minimal "Hello, World!" application.
  */
 public class HelloActivity extends Activity {
-    String tag="hello";
+    String tag="HelloActivityLOGGER";
     private Button button1;
     private Button buttondialog;
     /**
