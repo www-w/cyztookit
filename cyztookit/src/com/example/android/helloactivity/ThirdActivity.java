@@ -30,8 +30,8 @@ import android.content.Intent;
 /**
  * A minimal "Hello, World!" application.
  */
-public class SecondActivity extends Activity {
-    String tag="sec ";
+public class ThirdActivity extends Activity {
+    String tag="third ";
     private Button button1;
     private Button button2;
     private Button button3;
@@ -41,25 +41,25 @@ public class SecondActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.second_activity);
-        Toast.makeText(SecondActivity.this,tag+"taskid"+getTaskId(),Toast.LENGTH_SHORT).show();
+        setContentView(R.layout.third_activity);
+        Toast.makeText(ThirdActivity.this,tag+"taskid"+getTaskId(),Toast.LENGTH_SHORT).show();
         initView();
     }
     private void initView(){
-        button1=findViewById(R.id.btnsec1);
-        button2=findViewById(R.id.btnsec2);
-        button3=findViewById(R.id.btnsec3);
+        button1=findViewById(R.id.btnthi1);
+        button2=findViewById(R.id.btnthi2);
+        button3=findViewById(R.id.btnthi3);
         button1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent=new Intent(SecondActivity.this,HelloActivity.class);
+                Intent intent=new Intent(ThirdActivity.this,HelloActivity.class);
                 startActivity(intent);
             }
         });
         button2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent=new Intent("com.topv1.START_THIRD");
+                Intent intent=new Intent("com.topv1.START_UP");
                 startActivity(intent);
             }
         });
@@ -80,10 +80,10 @@ public class SecondActivity extends Activity {
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()){
             case R.id.item1:
-                Toast.makeText(SecondActivity.this,"item1～",Toast.LENGTH_LONG).show();
+                Toast.makeText(ThirdActivity.this,"item1～",Toast.LENGTH_LONG).show();
                 break;
             case R.id.item2:
-                Toast.makeText(SecondActivity.this,"item2～",Toast.LENGTH_LONG).show();
+                Toast.makeText(ThirdActivity.this,"item2～",Toast.LENGTH_LONG).show();
                 break;
         }
         return super.onOptionsItemSelected(item);

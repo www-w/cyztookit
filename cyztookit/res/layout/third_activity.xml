@@ -4,22 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-<Button android:id="@+id/btnsec1"
+<Button android:id="@+id/btnthi1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="open 1"
     />
-<Button android:id="@+id/btnsec2"
+<Button android:id="@+id/btnthi2"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="open 3"
-    android:layout_below="@id/btnsec1"
+    android:text="open 2"
+    android:layout_below="@id/btnthi1"
     />
-<Button android:id="@+id/btnsec3"
+<Button android:id="@+id/btnthi3"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="open 4!"
-    android:layout_below="@id/btnsec2"
+    android:layout_below="@id/btnthi2"
     />
 </RelativeLayout>
 

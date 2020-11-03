@@ -35,6 +35,9 @@ public class HelloActivity extends Activity {
     String tag="HelloActivityLOGGER";
     private Button button1;
     private Button buttondialog;
+    private Button btnhel1;
+    private Button btnhel2;
+    private Button btnhel3;
     /**
      * Called with the activity is first created.
      */
@@ -42,7 +45,8 @@ public class HelloActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Toast.makeText(HelloActivity.this,"oncreate",Toast.LENGTH_LONG).show();
+        Toast.makeText(HelloActivity.this,"oncreate"+this.toString(),Toast.LENGTH_SHORT).show();
+        Toast.makeText(HelloActivity.this,tag+"taskid"+getTaskId(),Toast.LENGTH_SHORT).show();
         // Set the layout for this activity.  You can find it
         // in res/layout/hello_activity.xml
         //View view = getLayoutInflater().inflate(R.layout.hello_activity, null);
@@ -54,12 +58,16 @@ public class HelloActivity extends Activity {
     private void initView(){
         button1=findViewById(R.id.button1);
         buttondialog=findViewById(R.id.buttonOpenDialog);
+        btnhel1=findViewById(R.id.btnhel1);
+        btnhel2=findViewById(R.id.btnhel2);
+        btnhel3=findViewById(R.id.btnhel3);
         button1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 //Intent intent = new Intent(HelloActivity.this,SecondActivity.class);
-                Intent intent = new Intent("com.topv1.START_UP");
-                intent.putExtra("ddd","这是数据，，！");
+                Intent intent = new Intent(HelloActivity.this,HelloActivity.class);
+                //Intent intent = new Intent("com.topv1.START_UP");
+                //intent.putExtra("ddd","这是数据，，！");
                 
                 //Intent intent = new Intent();
                 //intent.setAction(Intent.ACTION_CALL);
@@ -68,14 +76,35 @@ public class HelloActivity extends Activity {
                 //intent.setData(Uri.parse("tel:10086"));
                 //intent.setAction("com.android.contacts.action.LIST_CONTACTS");
 
-                //startActivity(intent);
-                startActivityForResult(intent,33);
+                startActivity(intent);
+                //startActivityForResult(intent,33);
             }
         });
         buttondialog.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 Intent intent = new Intent("com.topv1.START_DIALOG");
+                startActivity(intent);
+            }
+        });
+        btnhel1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent("com.topv1.START_UP");
+                startActivity(intent);
+            }
+        });
+        btnhel2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent("com.topv1.START_THIRD");
+                startActivity(intent);
+            }
+        });
+        btnhel3.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent("com.topv1.START_FORTH");
                 startActivity(intent);
             }
         });
@@ -99,10 +128,10 @@ public class HelloActivity extends Activity {
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()){
             case R.id.item1:
-                Toast.makeText(HelloActivity.this,"item1～",Toast.LENGTH_LONG).show();
+                Toast.makeText(HelloActivity.this,"item1～",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.item2:
-                Toast.makeText(HelloActivity.this,"item2～",Toast.LENGTH_LONG).show();
+                Toast.makeText(HelloActivity.this,"item2～",Toast.LENGTH_SHORT).show();
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -111,37 +140,37 @@ public class HelloActivity extends Activity {
     public void onStart(){
         super.onStart();
         Log.d(tag,"onStart");
-        Toast.makeText(HelloActivity.this,"onStart",Toast.LENGTH_LONG).show();
+        Toast.makeText(HelloActivity.this,"onStart",Toast.LENGTH_SHORT).show();
     }
     @Override
     public void onResume(){
         super.onResume();
         Log.d(tag,"onResume");
-        Toast.makeText(HelloActivity.this,"onResume",Toast.LENGTH_LONG).show();
+        Toast.makeText(HelloActivity.this,"onResume",Toast.LENGTH_SHORT).show();
     }
     @Override
     public void onPause(){
         super.onPause();
         Log.d(tag,"onPause");
-        Toast.makeText(HelloActivity.this,"onPause",Toast.LENGTH_LONG).show();
+        Toast.makeText(HelloActivity.this,"onPause",Toast.LENGTH_SHORT).show();
     }
     @Override
     public void onStop(){
         super.onStop();
         Log.d(tag,"onStop");
-        Toast.makeText(HelloActivity.this,"onStop",Toast.LENGTH_LONG).show();
+        Toast.makeText(HelloActivity.this,"onStop",Toast.LENGTH_SHORT).show();
     }
     @Override
     public void onDestroy(){
         super.onDestroy();
         Log.d(tag,"onDestroy");
-        Toast.makeText(HelloActivity.this,"onDestroy",Toast.LENGTH_LONG).show();
+        Toast.makeText(HelloActivity.this,"onDestroy",Toast.LENGTH_SHORT).show();
     }
     @Override 
     public void onRestart(){
         super.onRestart();
         Log.d(tag,"onRestart");
-        Toast.makeText(HelloActivity.this,"onRestart",Toast.LENGTH_LONG).show();
+        Toast.makeText(HelloActivity.this,"onRestart",Toast.LENGTH_SHORT).show();
     }
 
 }

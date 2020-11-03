@@ -32,7 +32,7 @@ import android.content.Intent;
  */
 public class DialogActivity extends Activity {
     String tag="hello";
-    private Button button2;
+    private Button button3;
     /**
      * Called with the activity is first created.
      */
@@ -41,17 +41,20 @@ public class DialogActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.dialog_activity);
+        initView();
     }
     private void initView(){
-        button2=findViewById(R.id.button2);
-        button2.setOnClickListener(new View.OnClickListener(){
+        button3=findViewById(R.id.button3);
+        button3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Toast.makeText(DialogActivity.this,"提示信息～",Toast.LENGTH_LONG).show();
+                /*
                 Intent rr=new Intent();
                 rr.putExtra("rt","来自二号窗口");
                 setResult(RESULT_OK,rr);
-                finish();
+                finish();*/
+                Intent intent=new Intent(DialogActivity.this,HelloActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -96,6 +99,7 @@ public class DialogActivity extends Activity {
     public void onDestroy(){
         super.onDestroy();
         Log.d(tag,"onDestroy");
+        Toast.makeText(DialogActivity.this,"提示信destory息～",Toast.LENGTH_LONG).show();
     }
     @Override 
     public void onRestart(){

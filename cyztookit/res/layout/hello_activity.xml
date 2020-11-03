@@ -21,5 +21,23 @@
     android:text="buttonDialog"
     android:layout_below="@id/button1"
     />
+<Button android:id="@+id/btnhel1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="open 2!"
+    android:layout_below="@id/buttonOpenDialog"
+    />
+<Button android:id="@+id/btnhel2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="open 3"
+    android:layout_below="@id/btnhel1"
+    />
+<Button android:id="@+id/btnhel3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="open 4"
+    android:layout_below="@id/btnhel2"
+    />
 </RelativeLayout>
 

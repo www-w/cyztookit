@@ -5,13 +5,13 @@
     <application android:label="一个后台程序" 
         android:theme="@style/AppTheme"
         >
-        <activity android:name="HelloActivity">
+        <activity android:name="HelloActivity" android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name="SecondActivity">
+        <activity android:name="SecondActivity" android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="com.topv1.START_UP"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -21,6 +21,18 @@
             android:theme="@android:style/Theme.Dialog">
             <intent-filter>
                 <action android:name="com.topv1.START_DIALOG"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="ThirdActivity">
+            <intent-filter>
+                <action android:name="com.topv1.START_THIRD"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="ForthActivity" android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="com.topv1.START_FORTH"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
