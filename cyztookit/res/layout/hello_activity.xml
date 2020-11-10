@@ -13,7 +13,7 @@
 <Button android:id="@+id/button1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="button!"
+    android:text="简单布局组件!"
     />
 <Button android:id="@+id/buttonOpenDialog"
     android:layout_width="match_parent"

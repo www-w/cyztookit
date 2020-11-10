@@ -30,7 +30,7 @@ import android.content.Intent;
 /**
  * A minimal "Hello, World!" application.
  */
-public class ForthActivity extends Activity {
+public class ForthActivity extends BaseActivity {
     String tag="four ";
     private Button button1;
     private Button button2;

@@ -31,7 +31,7 @@ import android.net.Uri;
 /**
  * A minimal "Hello, World!" application.
  */
-public class HelloActivity extends Activity {
+public class HelloActivity extends BaseActivity {
     String tag="HelloActivityLOGGER";
     private Button button1;
     private Button buttondialog;
@@ -65,8 +65,8 @@ public class HelloActivity extends Activity {
             @Override
             public void onClick(View view){
                 //Intent intent = new Intent(HelloActivity.this,SecondActivity.class);
-                Intent intent = new Intent(HelloActivity.this,HelloActivity.class);
-                //Intent intent = new Intent("com.topv1.START_UP");
+                //Intent intent = new Intent(HelloActivity.this,HelloActivity.class);
+                Intent intent = new Intent("com.topv1.START_UP");
                 //intent.putExtra("ddd","这是数据，，！");
                 
                 //Intent intent = new Intent();

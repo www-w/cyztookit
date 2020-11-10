@@ -11,7 +11,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name="SecondActivity" android:launchMode="singleInstance">
+        <activity android:name="SecondActivity" android:launchMode="standard">
             <intent-filter>
                 <action android:name="com.topv1.START_UP"/>
                 <category android:name="android.intent.category.DEFAULT"/>

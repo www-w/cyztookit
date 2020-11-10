@@ -1,25 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-<Button android:id="@+id/btnsec1"
+<LinearLayout 
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+<TextView 
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="open 1"
+    android:text="这是TextView的内容！"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    android:textColor="#ff0000"
+    android:background="#888888"
+    android:gravity="center"
+    android:padding="10dp"
     />
-<Button android:id="@+id/btnsec2"
+<EditText
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="open 3"
-    android:layout_below="@id/btnsec1"
+    android:hint="输入提示！"
+    android:inputType="phone"
     />
-<Button android:id="@+id/btnsec3"
+<Button 
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="open 4!"
-    android:layout_below="@id/btnsec2"
+    android:text="提交"
     />
-</RelativeLayout>
+<!--android:textAlignment="center"
+android:layout_gravity="center"-->
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="280sp"
+    android:src="@drawable/img"
+    android:background="#ff0000"
 
+    />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="爱好："
+            />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="足球"
+            android:checked="true"
+            />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="篮球"
+            />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="游泳"
+            />
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

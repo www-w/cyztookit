@@ -30,7 +30,7 @@ import android.content.Intent;
 /**
  * A minimal "Hello, World!" application.
  */
-public class SecondActivity extends Activity {
+public class SecondActivity extends BaseActivity {
     String tag="sec ";
     private Button button1;
     private Button button2;
@@ -43,17 +43,19 @@ public class SecondActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second_activity);
         Toast.makeText(SecondActivity.this,tag+"taskid"+getTaskId(),Toast.LENGTH_SHORT).show();
-        initView();
+        //initView();
     }
     private void initView(){
+        /*
         button1=findViewById(R.id.btnsec1);
         button2=findViewById(R.id.btnsec2);
         button3=findViewById(R.id.btnsec3);
         button1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent=new Intent(SecondActivity.this,HelloActivity.class);
-                startActivity(intent);
+                //Intent intent=new Intent(SecondActivity.this,HelloActivity.class);
+                //startActivity(intent);
+                ActivityCollector.finishAll();
             }
         });
         button2.setOnClickListener(new View.OnClickListener(){
@@ -70,6 +72,7 @@ public class SecondActivity extends Activity {
                 startActivity(intent);
             }
         });
+        */
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
