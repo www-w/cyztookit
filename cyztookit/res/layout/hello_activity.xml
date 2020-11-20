@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     >
 <TextView android:id="@+id/text"
     android:layout_width="wrap_content"
@@ -15,23 +16,15 @@
     android:layout_height="wrap_content"
     android:text="简单布局组件!"
     />
-<Button android:id="@+id/buttonOpenDialog"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="buttonDialog"
-    android:layout_below="@id/button1"
-    />
 <Button android:id="@+id/btnhel1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="open 2!"
-    android:layout_below="@id/buttonOpenDialog"
+    android:text="ProgressBar"
     />
 <Button android:id="@+id/btnhel2"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="open 3"
-    android:layout_below="@id/btnhel1"
+    android:text="对话框组件"
     />
 <Button android:id="@+id/btnhel3"
     android:layout_width="match_parent"
@@ -39,5 +32,11 @@
     android:text="open 4"
     android:layout_below="@id/btnhel2"
     />
-</RelativeLayout>
+<Button android:id="@+id/buttonOpenDialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="buttonDialog"
+    android:layout_below="@id/button1"
+    />
+</LinearLayout>
 

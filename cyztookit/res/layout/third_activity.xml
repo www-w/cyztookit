@@ -1,9 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     >
+<ProgressBar 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    />
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:text="正在加载中。。。"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    />
+<ProgressBar
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="?android:attr/progressBarStyleHorizontal"
+    android:id="@+id/pb"
+    />
+<SeekBar
+    android:id="@+id/sk"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    />
+<TextView
+    android:id="@+id/tvloading"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:text="正在加载中：0%"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    />
+
 <Button android:id="@+id/btnthi1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -21,5 +55,5 @@
     android:text="open 4!"
     android:layout_below="@id/btnthi2"
     />
-</RelativeLayout>
+</LinearLayout>
 

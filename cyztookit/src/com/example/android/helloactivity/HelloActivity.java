@@ -90,14 +90,15 @@ public class HelloActivity extends BaseActivity {
         btnhel1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent = new Intent("com.topv1.START_UP");
+                //Intent intent = new Intent("com.topv1.START_UP");
+                Intent intent = new Intent("com.topv1.START_THIRD");
                 startActivity(intent);
             }
         });
         btnhel2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent = new Intent("com.topv1.START_THIRD");
+                Intent intent = new Intent("com.topv1.START_FORTH");
                 startActivity(intent);
             }
         });

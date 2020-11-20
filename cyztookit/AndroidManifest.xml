@@ -4,6 +4,7 @@
     <uses-permission android:name="android.permission.CALL_PHONE"/>
     <application android:label="一个后台程序" 
         android:theme="@style/AppTheme"
+        android:icon="@drawable/img"
         >
         <activity android:name="HelloActivity" android:launchMode="singleInstance">
             <intent-filter>

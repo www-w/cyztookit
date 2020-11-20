@@ -16,12 +16,14 @@
 
 package com.example.android.helloactivity;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.Toast;
+import android.widget.SeekBar;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
@@ -35,6 +37,9 @@ public class ThirdActivity extends BaseActivity {
     private Button button1;
     private Button button2;
     private Button button3;
+    private ProgressBar pb;
+    private SeekBar sk;
+    private TextView tvloading;
     /**
      * Called with the activity is first created.
      */
@@ -49,6 +54,29 @@ public class ThirdActivity extends BaseActivity {
         button1=findViewById(R.id.btnthi1);
         button2=findViewById(R.id.btnthi2);
         button3=findViewById(R.id.btnthi3);
+        pb=findViewById(R.id.pb);
+        sk=findViewById(R.id.sk);
+        tvloading=findViewById(R.id.tvloading);
+        sk.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
+            @Override
+            public void onProgressChanged(SeekBar bar,int progress,boolean frombuser){
+                tvloading.setText("正在加载中："+progress+"%");
+                pb.setProgress(progress);
+                pb.setVisibility(View.VISIBLE);
+            }
+            @Override
+            public void onStartTrackingTouch(SeekBar bar){
+                Toast.makeText(ThirdActivity.this,"touch start",Toast.LENGTH_SHORT).show();
+            }
+            @Override
+            public void onStopTrackingTouch(SeekBar bar){
+                Toast.makeText(ThirdActivity.this,"touch Stoped at: "+bar.getProgress(),Toast.LENGTH_SHORT).show();
+                if(bar.getProgress()==bar.getMax()){
+                    pb.setVisibility(View.GONE);
+                }else{
+                }
+            }
+        });
         button1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
