@@ -53,7 +53,7 @@ public class CameraActivity extends Activity {
                     }).show();
                 }else {
                     ActivityCompat.requestPermissions(this, needPermissions, 12);
-                    break;
+                    return;
                 }
             }
         }
