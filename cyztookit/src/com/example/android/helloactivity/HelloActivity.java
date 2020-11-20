@@ -102,10 +102,11 @@ public class HelloActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+        // 摄像头调用
         btnhel3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent = new Intent("com.topv1.START_FORTH");
+                Intent intent = new Intent(HelloActivity.this,CameraActivity.class);
                 startActivity(intent);
             }
         });

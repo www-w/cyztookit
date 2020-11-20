@@ -29,8 +29,7 @@
 <Button android:id="@+id/btnhel3"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="open 4"
-    android:layout_below="@id/btnhel2"
+    android:text="摄像头调用"
     />
 <Button android:id="@+id/buttonOpenDialog"
     android:layout_width="match_parent"
