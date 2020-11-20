@@ -1,7 +1,0 @@
-Executable : D:\Users\Administrator\AppData\Local\Android\Sdk\cmake\3.10.2.4988404\bin\ninja.exe
-arguments : 
--C
-F:\vsdev\Test\cyztookit\cyztookit\.cxx\cmake\debug\x86
-native-lib
-jvmArgs : 
-
