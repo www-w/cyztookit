@@ -16,6 +16,7 @@
 
 package com.example.android.helloactivity;
 
+import android.Manifest;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -38,6 +39,8 @@ public class HelloActivity extends BaseActivity {
     private Button btnhel1;
     private Button btnhel2;
     private Button btnhel3;
+
+
     /**
      * Called with the activity is first created.
      */
