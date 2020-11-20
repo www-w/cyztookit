@@ -53,8 +53,8 @@ public class CameraActivity extends Activity {
                     }).show();
                 }else {
                     ActivityCompat.requestPermissions(this, needPermissions, 12);
-                    return;
                 }
+                return;
             }
         }
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
