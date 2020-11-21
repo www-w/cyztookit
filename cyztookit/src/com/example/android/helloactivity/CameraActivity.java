@@ -58,8 +58,13 @@ public class CameraActivity extends AppCompatActivity{
                 return;
             }
         }
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        startActivityForResult(intent,CAMERA_REQUEST);
+        try {
+            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivityForResult(intent, CAMERA_REQUEST);
+        }catch(Exception e){
+            Toast.makeText(this,e.getMessage(),Toast.LENGTH_SHORT);
+            e.printStackTrace();
+        }
     }
 
     @Override

@@ -10,7 +10,8 @@
         android:icon="@drawable/img"
         android:label="一个后台程序"
         android:theme="@style/AppTheme">
-        <activity android:name=".CameraActivity"></activity>
+        <activity android:name=".CameraActivity"
+            android:theme="@style/Theme.AppCompat"></activity>
         <activity
             android:name=".HelloActivity"
             android:launchMode="singleInstance">
