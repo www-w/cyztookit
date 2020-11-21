@@ -14,8 +14,9 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.core.app.ActivityCompat;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class CameraActivity extends Activity {
+public class CameraActivity extends AppCompatActivity{
     private final int CAMERA_REQUEST = 100;
     private ImageView ivLifa;
     private static final String[] needPermissions={
@@ -63,6 +64,7 @@ public class CameraActivity extends Activity {
 
     @Override
     public void onRequestPermissionsResult(int requestCode,  String[] permissions, int[] grantResults) {
+        Toast.makeText(this,"进入授权回调",Toast.LENGTH_SHORT);
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if(requestCode!=12)return;
         for(int p : grantResults){
@@ -81,9 +83,9 @@ public class CameraActivity extends Activity {
             case CAMERA_REQUEST:
                 if(resultCode == RESULT_OK)
                 {
-    //                  Bitmap bmp = (Bitmap)data.getExtras().get("data");
-       //             ivLifa.setImageBitmap(bmp);
-                    Toast.makeText(CameraActivity.this,"camera ret",Toast.LENGTH_SHORT).show();
+                      Bitmap bmp = (Bitmap)data.getExtras().get("data");
+                      ivLifa.setImageBitmap(bmp);
+        //            Toast.makeText(CameraActivity.this,"camera ret",Toast.LENGTH_SHORT).show();
                 }
                 break;
         }

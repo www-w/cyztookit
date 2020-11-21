@@ -13,8 +13,8 @@
         android:layout_height="wrap_content"
         />
     <ImageView
-        android:layout_width="500dp"
-        android:layout_height="500dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:id="@+id/iv_lifa"
         />
