@@ -86,16 +86,27 @@ public class HelloActivity extends BaseActivity {
         buttondialog.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent = new Intent("com.topv1.START_DIALOG");
-                startActivity(intent);
+                //Intent intent = new Intent("com.topv1.START_DIALOG");
+                Intent intent = new Intent(HelloActivity.this,LoginFormActivity.class);
+                try{
+                    startActivity(intent);
+                }catch(Exception e){
+                    Toast.makeText(HelloActivity.this,e.getMessage(),Toast.LENGTH_SHORT);
+                    e.printStackTrace();
+                }
             }
         });
         btnhel1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 //Intent intent = new Intent("com.topv1.START_UP");
-                Intent intent = new Intent("com.topv1.START_THIRD");
-                startActivity(intent);
+                try{
+                    Intent intent = new Intent("com.topv1.START_THIRD");
+                    startActivity(intent);
+                }catch(Exception e){
+                    Toast.makeText(HelloActivity.this,e.getMessage(),Toast.LENGTH_SHORT);
+                    e.printStackTrace();
+                }
             }
         });
         btnhel2.setOnClickListener(new View.OnClickListener(){

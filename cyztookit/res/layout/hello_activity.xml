@@ -34,8 +34,7 @@
 <Button android:id="@+id/buttonOpenDialog"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="buttonDialog"
-    android:layout_below="@id/button1"
+    android:text="注册窗口"
     />
 </LinearLayout>
 

@@ -14,9 +14,9 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.core.app.ActivityCompat;
-import androidx.appcompat.app.AppCompatActivity;
+//import androidx.appcompat.app.AppCompatActivity;
 
-public class CameraActivity extends AppCompatActivity{
+public class CameraActivity extends Activity implements ActivityCompat.OnRequestPermissionsResultCallback{
     private final int CAMERA_REQUEST = 100;
     private ImageView ivLifa;
     private static final String[] needPermissions={
@@ -53,7 +53,7 @@ public class CameraActivity extends AppCompatActivity{
                         }
                     }).show();
                 }else {
-                    ActivityCompat.requestPermissions(this, needPermissions, 12);
+                    ActivityCompat.requestPermissions(CameraActivity.this, needPermissions, 12);
                 }
                 return;
             }
@@ -67,7 +67,6 @@ public class CameraActivity extends AppCompatActivity{
         }
     }
 
-    @Override
     public void onRequestPermissionsResult(int requestCode,  String[] permissions, int[] grantResults) {
         Toast.makeText(this,"进入授权回调",Toast.LENGTH_SHORT);
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
