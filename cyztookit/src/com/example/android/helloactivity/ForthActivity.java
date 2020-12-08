@@ -16,7 +16,6 @@
 
 package com.example.android.helloactivity;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.util.Log;
@@ -25,9 +24,9 @@ import android.widget.Toast;
 import android.widget.EditText;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.content.Intent;
 import android.app.AlertDialog;
-import android.app.ProgressDialog;
+//dep import android.app.ProgressDialog;
+import android.widget.ProgressBar;
 import android.app.DatePickerDialog;
 import android.widget.DatePicker;
 import android.content.DialogInterface;
@@ -157,6 +156,27 @@ public class ForthActivity extends BaseActivity {
             .show();
     }
     public void btnProgressDialog(View view){
+        View v=View.inflate(this,R.layout.loading_dialog,null);
+        final ProgressBar pb=v.findViewById(R.id.ldpb);
+        final AlertDialog a= new AlertDialog.Builder(ForthActivity.this)
+            .setView(v)
+            .setCancelable(false)
+            .show();
+        new Thread(new Runnable(){
+            @Override
+            public void run(){
+                for(int i=0;i<101;i++){
+                    try{
+                    Thread.sleep(100);
+                    }catch(InterruptedException ie){
+                        ie.printStackTrace();
+                    }
+                    pb.setProgress(i);
+                }
+                a.dismiss();
+            }
+        }).start();
+        /* dep
         final ProgressDialog pd = new ProgressDialog(this);
         pd.setTitle("进度条");
         pd.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
@@ -176,7 +196,8 @@ public class ForthActivity extends BaseActivity {
                 }
                 pd.dismiss();
             }
-        }).start();
+        }).start();*/
+        
     }
     public void btnDatepickerDialog(View view){
         Calendar c=Calendar.getInstance();

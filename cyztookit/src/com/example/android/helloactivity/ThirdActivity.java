@@ -27,10 +27,18 @@ import android.widget.TextView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
+import androidx.core.app.NotificationCompat;
+import android.os.Build;
+import android.app.NotificationManager;
+import android.app.NotificationChannel;
+import android.app.PendingIntent;
+import androidx.core.app.NotificationManagerCompat;
+import android.os.Handler;
+import android.os.Message;
 
 
 /**
- * A minimal "Hello, World!" application.
+ * A minimal "Progress" application.
  */
 public class ThirdActivity extends BaseActivity {
     String tag="third ";
@@ -40,6 +48,7 @@ public class ThirdActivity extends BaseActivity {
     private ProgressBar pb;
     private SeekBar sk;
     private TextView tvloading;
+    private TextView tvlog;
     /**
      * Called with the activity is first created.
      */
@@ -47,9 +56,121 @@ public class ThirdActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.third_activity);
-        Toast.makeText(ThirdActivity.this,tag+"taskid"+getTaskId(),Toast.LENGTH_SHORT).show();
+        Toast.makeText(ThirdActivity.this,"Build.VERSION.SDK_INT:"+Build.VERSION.SDK_INT+"\nBuild.VERSION_CODES.O:"+Build.VERSION_CODES.O,Toast.LENGTH_SHORT).show();
+        createNotificationChannel();
+
         initView();
+        notify1();
+        notify2();
+        notify3();
+        notify4();
+
     }
+    private void notify4(){
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID);
+        builder.setContentTitle("Picture Download")
+            .setContentText("Download in progress")
+            .setSmallIcon(R.drawable.img)
+        .setStyle(new NotificationCompat.BigTextStyle()
+                .bigText("M8uch longer text that cannot fit one line..."))
+            .setPriority(NotificationCompat.PRIORITY_LOW);
+        //notificationManager.notify(126, builder.build());//可有可无
+
+        // Issue the initial notification with zero progress
+        int PROGRESS_MAX = 100;
+        int PROGRESS_CURRENT = 30;
+        builder.setProgress(PROGRESS_MAX, PROGRESS_CURRENT, false);
+        notificationManager.notify(126, builder.build());
+
+        // Do the job here that tracks the progress.
+        // Usually, this should be in a
+        // worker thread
+        // To show progress, update PROGRESS_CURRENT and update the notification with:
+        // builder.setProgress(PROGRESS_MAX, PROGRESS_CURRENT, false);
+        // notificationManager.notify(notificationId, builder.build());
+
+        // When done, update the notification one more time to remove the progress bar
+        /*builder.setContentText("Download complete")
+            .setProgress(0,0,false);
+        notificationManager.notify(126, builder.build());*/
+    }
+    private void notify1(){
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
+        .setSmallIcon(R.drawable.img)
+        .setContentTitle("title")
+        .setContentText("content")
+        .setPriority(NotificationCompat.PRIORITY_MAX);
+        NotificationManagerCompat notimanager=NotificationManagerCompat.from(this);
+        try{
+            notimanager.notify(123,builder.build());
+        }catch(Exception e){
+            Toast.makeText(ThirdActivity.this,e.getMessage(),Toast.LENGTH_LONG).show();
+            tvloading.setText(e.getMessage());
+        }
+    }
+    private void notify2(){
+        // Create an explicit intent for an Activity in your app
+        Intent intent = new Intent(this, ForthActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
+            .setSmallIcon(R.drawable.img)
+            .setContentTitle("My notification")
+            .setContentText("Hello World!")
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            // Set the intent that will fire when the user taps the notification
+            .setContentIntent(pendingIntent)
+            //.setFullScreenIntent(pendingIntent, true)
+            .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+            .setAutoCancel(true);
+        NotificationManagerCompat notimanager=NotificationManagerCompat.from(this);
+        notimanager.notify(124,builder.build());
+    }
+    private void notify3(){
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
+        .setSmallIcon(R.drawable.img)
+        .setContentTitle("My notification")
+        .setContentText("Much longer text that cannot fit one line...")
+        .setStyle(new NotificationCompat.BigTextStyle()
+                .bigText("M8uch longer text that cannot fit one line..."))
+        .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+        NotificationManagerCompat notimanager=NotificationManagerCompat.from(this);
+        notimanager.notify(125,builder.build());
+    }
+    String CHANNEL_ID="cid 10";
+    private void createNotificationChannel() {
+        // Create the NotificationChannel, but only on API 26+ because
+        // the NotificationChannel class is new and not in the support library
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = ("cannelnamek");
+            String description = ("desc");
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel(CHANNEL_ID, name, importance);
+            channel.setDescription(description);
+            // Register the channel with the system; you can't change the importance
+            // or other notification behaviors after this
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
+    }
+    int progress=0;
+    long mtid,ttid,htid;
+    private Handler handler=new Handler(){
+        @Override
+        public void handleMessage(Message msg){
+            switch(msg.what){
+                case 1:
+                    progress++;
+                    sk.setProgress(progress);
+                    if(progress<100)handler.sendEmptyMessageDelayed(1,1000);
+                    htid=Thread.currentThread().getId();
+                    tvlog.setText("mtid:"+mtid+"\nttid:"+ttid+"\nhtid:"+htid);
+                    break;
+            }
+        }
+    };
     private void initView(){
         button1=findViewById(R.id.btnthi1);
         button2=findViewById(R.id.btnthi2);
@@ -57,6 +178,8 @@ public class ThirdActivity extends BaseActivity {
         pb=findViewById(R.id.pb);
         sk=findViewById(R.id.sk);
         tvloading=findViewById(R.id.tvloading);
+        tvlog=findViewById(R.id.tvlog);
+        mtid=Thread.currentThread().getId();
         sk.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
             @Override
             public void onProgressChanged(SeekBar bar,int progress,boolean frombuser){
@@ -80,8 +203,14 @@ public class ThirdActivity extends BaseActivity {
         button1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent=new Intent(ThirdActivity.this,HelloActivity.class);
-                startActivity(intent);
+                Thread t=new Thread(new Runnable(){
+                    @Override
+                    public void run(){
+                        ttid=Thread.currentThread().getId();
+                        handler.sendEmptyMessage(1);
+                    }
+                });
+                t.start();
             }
         });
         button2.setOnClickListener(new View.OnClickListener(){

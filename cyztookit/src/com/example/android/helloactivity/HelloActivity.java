@@ -16,8 +16,6 @@
 
 package com.example.android.helloactivity;
 
-import android.Manifest;
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.util.Log;
@@ -26,7 +24,6 @@ import android.widget.Toast;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
-import android.net.Uri;
 
 
 /**

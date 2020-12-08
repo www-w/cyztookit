@@ -16,15 +16,11 @@
 
 package com.example.android.helloactivity;
 
-import android.app.Activity;
 import android.os.Bundle;
-import android.view.View;
 import android.util.Log;
-import android.widget.Button;
 import android.widget.Toast;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.content.Intent;
 
 
 /**
@@ -32,9 +28,6 @@ import android.content.Intent;
  */
 public class SecondActivity extends BaseActivity {
     String tag="sec ";
-    private Button button1;
-    private Button button2;
-    private Button button3;
     /**
      * Called with the activity is first created.
      */
@@ -43,36 +36,6 @@ public class SecondActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second_activity);
         Toast.makeText(SecondActivity.this,tag+"taskid"+getTaskId(),Toast.LENGTH_SHORT).show();
-        //initView();
-    }
-    private void initView(){
-        /*
-        button1=findViewById(R.id.btnsec1);
-        button2=findViewById(R.id.btnsec2);
-        button3=findViewById(R.id.btnsec3);
-        button1.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                //Intent intent=new Intent(SecondActivity.this,HelloActivity.class);
-                //startActivity(intent);
-                ActivityCollector.finishAll();
-            }
-        });
-        button2.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                Intent intent=new Intent("com.topv1.START_THIRD");
-                startActivity(intent);
-            }
-        });
-        button3.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                Intent intent=new Intent("com.topv1.START_FORTH");
-                startActivity(intent);
-            }
-        });
-        */
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu){

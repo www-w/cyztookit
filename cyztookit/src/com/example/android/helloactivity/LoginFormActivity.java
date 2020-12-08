@@ -18,28 +18,26 @@ package com.example.android.helloactivity;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.View;
 import android.util.Log;
-import android.widget.Button;
 import android.widget.Toast;
+import android.widget.TextView;
 import android.widget.EditText;
+import android.widget.CheckBox;
+import android.widget.Button;
+import android.widget.RadioGroup;
+import android.widget.RadioButton;
+import android.widget.CompoundButton;
+import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.content.Intent;
-import android.app.AlertDialog;
-import android.app.ProgressDialog;
-import android.app.DatePickerDialog;
-import android.widget.DatePicker;
-import android.content.DialogInterface;
-import java.util.Calendar;
 
 /**
+ * 表单填写例子
  */
 public class LoginFormActivity extends Activity {
-    String tag="four ";
-    private Button button1;
-    private Button button2;
-    private Button button3;
+    // 定义日志用的标记
+    private String tag="LoginFormActivity";
+    private LoginFormActivityNative nat=new LoginFormActivityNative();
     /**
      * Called with the activity is first created.
      */
@@ -49,7 +47,79 @@ public class LoginFormActivity extends Activity {
         setContentView(R.layout.loginform);
         initView();
     }
+    EditText etName;
+    EditText etAge;
+    EditText etAddr;
+    EditText etPhone;
+    RadioGroup rgGender;
+    CheckBox cbMusic;
+    CheckBox cbArt;
+    CheckBox cbBasket;
+    CheckBox cbReading;
+    TextView tvShow;
+    Button btnOk;
     private void initView(){
+        etName=findViewById(R.id.et_name);
+        etAge= findViewById(R.id.et_age);
+        etAddr=findViewById(R.id.et_address);
+        etPhone=findViewById(R.id.et_phone);
+        rgGender=findViewById(R.id.rg_gender);
+        cbMusic=findViewById(R.id.cb_music);
+        cbArt=findViewById(R.id.cb_art);
+        cbBasket=findViewById(R.id.cb_basketball);
+        cbReading=findViewById(R.id.cb_reading);
+        tvShow=findViewById(R.id.tv_show);
+        btnOk=findViewById(R.id.btnok);
+        rgGender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
+            public void onCheckedChanged(RadioGroup group, int checkedId){
+                RadioButton rb=group.findViewById(checkedId);
+                CharSequence t=rb.getText();
+                nat.SetGender(t.toString());
+                Toast.makeText(LoginFormActivity.this,t,Toast.LENGTH_SHORT).show();
+}
+        });
+        CompoundButton.OnCheckedChangeListener cbcl=new CompoundButton.OnCheckedChangeListener(){
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+                CharSequence cq=buttonView.getText();
+                nat.SetHobby(cq.toString(),isChecked);
+                Toast.makeText(LoginFormActivity.this,cq+String.valueOf(isChecked),Toast.LENGTH_SHORT).show();
+            }
+        };
+        cbMusic.setOnCheckedChangeListener(cbcl);
+        cbArt.setOnCheckedChangeListener(cbcl);
+        cbBasket.setOnCheckedChangeListener(cbcl);
+        cbReading.setOnCheckedChangeListener(cbcl);
+        btnOk.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // native
+                nat.SetName(etName.getText().toString());
+                nat.SetAge(Integer.parseInt(0+etAge.getText().toString()));
+                nat.SetAddress(etAddr.getText().toString());
+                nat.SetPhone(etPhone.getText().toString());
+                tvShow.setText(nat.GetResult());
+                // Do something in response to button click
+                /* java
+                CharSequence gender="";
+                RadioButton rb=findViewById(rgGender.getCheckedRadioButtonId());
+                if(rb!=null){
+                    gender=rb.getText();
+                }
+                StringBuilder sb=new StringBuilder();
+                sb.append("姓名：").append(etName.getText()).append("\n")
+                    .append("年龄：").append(etAge.getText()).append("\n")
+                    .append("地址：").append(etAddr.getText()).append("\n")
+                    .append("电话：").append(etPhone.getText()).append("\n")
+                    .append("性别：").append(gender).append("\n")
+                    .append("爱好：")
+                    ;
+                if(cbMusic.isChecked())sb.append(cbMusic.getText()).append(" ");
+                if(cbArt.isChecked())sb.append(cbArt.getText()).append(" ");
+                if(cbBasket.isChecked())sb.append(cbBasket.getText()).append(" ");
+                if(cbReading.isChecked())sb.append(cbReading.getText()).append(" ");
+                tvShow.setText(sb.toString());
+                */
+            }
+        });
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
