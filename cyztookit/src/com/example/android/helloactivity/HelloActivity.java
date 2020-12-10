@@ -36,6 +36,7 @@ public class HelloActivity extends BaseActivity {
     private Button btnhel1;
     private Button btnhel2;
     private Button btnhel3;
+    private Button buttonOpenViewPager;
 
 
     /**
@@ -61,6 +62,21 @@ public class HelloActivity extends BaseActivity {
         btnhel1=findViewById(R.id.btnhel1);
         btnhel2=findViewById(R.id.btnhel2);
         btnhel3=findViewById(R.id.btnhel3);
+        buttonOpenViewPager = findViewById(R.id.buttonOpenViewPager);
+        buttonOpenViewPager.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(HelloActivity.this,ViewPagerActivity.class);
+                try{
+                    startActivity(intent);
+                }catch(Exception e){
+                    Toast.makeText(HelloActivity.this,e.getMessage(),Toast.LENGTH_SHORT);
+                    e.printStackTrace();
+                }
+
+            }
+        });
+
         button1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){

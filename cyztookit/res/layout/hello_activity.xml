@@ -36,5 +36,10 @@
     android:layout_height="wrap_content"
     android:text="注册窗口"
     />
+<Button android:id="@+id/buttonOpenViewPager"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="轮播ViewPager2"
+    />
 </LinearLayout>
 
