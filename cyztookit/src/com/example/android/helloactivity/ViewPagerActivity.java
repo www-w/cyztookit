@@ -30,6 +30,7 @@ import android.widget.CompoundButton;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import androidx.viewpager2.widget.ViewPager2;
 
 /**
  * 滚动banner测试
