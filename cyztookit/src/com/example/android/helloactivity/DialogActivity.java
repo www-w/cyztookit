@@ -29,7 +29,7 @@ import android.content.Intent;
 /**
  * A minimal "Hello, World!" application.
  */
-public class DialogActivity extends BaseActivity {
+public class DialogActivity extends android.app.Activity {
     String tag="hello";
     private Button button3;
     /**

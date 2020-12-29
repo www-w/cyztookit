@@ -40,7 +40,7 @@ import android.os.Message;
 /**
  * A minimal "Progress" application.
  */
-public class ThirdActivity extends BaseActivity {
+public class ThirdActivity extends android.app.Activity {
     String tag="third ";
     private Button button1;
     private Button button2;

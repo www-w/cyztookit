@@ -31,11 +31,12 @@ import android.app.DatePickerDialog;
 import android.widget.DatePicker;
 import android.content.DialogInterface;
 import java.util.Calendar;
+import android.app.Activity;
 
 /**
  * A minimal "Hello, World!" application.
  */
-public class ForthActivity extends BaseActivity {
+public class ForthActivity extends Activity {
     String tag="four ";
     private Button button1;
     private Button button2;

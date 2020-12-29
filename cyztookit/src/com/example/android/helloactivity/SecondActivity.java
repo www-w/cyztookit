@@ -26,7 +26,7 @@ import android.view.MenuItem;
 /**
  * A minimal "Hello, World!" application.
  */
-public class SecondActivity extends BaseActivity {
+public class SecondActivity extends android.app.Activity {
     String tag="sec ";
     /**
      * Called with the activity is first created.

@@ -29,7 +29,7 @@ import android.content.Intent;
 /**
  * A minimal "Hello, World!" application.
  */
-public class HelloActivity extends BaseActivity {
+public class HelloActivity extends android.app.Activity {
     String tag="HelloActivityLOGGER";
     private Button button1;
     private Button buttondialog;
