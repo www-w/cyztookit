@@ -157,9 +157,9 @@ public class ThirdActivity extends android.app.Activity {
     }
     int progress=0;
     long mtid,ttid,htid;
-    private Handler handler=new Handler(){
+    private Handler handler=new Handler(new Handler.Callback(){
         @Override
-        public void handleMessage(Message msg){
+        public boolean handleMessage(Message msg){
             switch(msg.what){
                 case 1:
                     progress++;
@@ -169,8 +169,9 @@ public class ThirdActivity extends android.app.Activity {
                     tvlog.setText("mtid:"+mtid+"\nttid:"+ttid+"\nhtid:"+htid);
                     break;
             }
+	    return false;
         }
-    };
+    });
     private void initView(){
         button1=findViewById(R.id.btnthi1);
         button2=findViewById(R.id.btnthi2);

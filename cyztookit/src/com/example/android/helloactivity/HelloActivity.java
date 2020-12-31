@@ -70,7 +70,7 @@ public class HelloActivity extends android.app.Activity {
                 try{
                     startActivity(intent);
                 }catch(Exception e){
-                    Toast.makeText(HelloActivity.this,e.getMessage(),Toast.LENGTH_SHORT);
+                    Toast.makeText(HelloActivity.this,e.getMessage(),Toast.LENGTH_SHORT).show();
                     e.printStackTrace();
                 }
 
@@ -104,7 +104,7 @@ public class HelloActivity extends android.app.Activity {
                 try{
                     startActivity(intent);
                 }catch(Exception e){
-                    Toast.makeText(HelloActivity.this,e.getMessage(),Toast.LENGTH_SHORT);
+                    Toast.makeText(HelloActivity.this,e.getMessage(),Toast.LENGTH_SHORT).show();
                     e.printStackTrace();
                 }
             }
@@ -117,7 +117,7 @@ public class HelloActivity extends android.app.Activity {
                     Intent intent = new Intent("com.topv1.START_THIRD");
                     startActivity(intent);
                 }catch(Exception e){
-                    Toast.makeText(HelloActivity.this,e.getMessage(),Toast.LENGTH_SHORT);
+                    Toast.makeText(HelloActivity.this,e.getMessage(),Toast.LENGTH_SHORT).show();
                     e.printStackTrace();
                 }
             }

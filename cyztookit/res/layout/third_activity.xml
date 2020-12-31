@@ -56,13 +56,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="open 2"
-    android:layout_below="@id/btnthi1"
     />
 <Button android:id="@+id/btnthi3"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="open 4!"
-    android:layout_below="@id/btnthi2"
     />
 </LinearLayout>
 

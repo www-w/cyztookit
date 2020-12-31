@@ -47,7 +47,7 @@ public class ViewPagerActivity extends Activity {
         try{
             setContentView(R.layout.viewpager_activity);
         }catch(Exception e){
-            Toast.makeText(ViewPagerActivity.this,e.getMessage(),Toast.LENGTH_SHORT);
+            Toast.makeText(ViewPagerActivity.this,e.getMessage(),Toast.LENGTH_SHORT).show();
             tag=e.getMessage();
             e.printStackTrace();
         }

@@ -49,7 +49,7 @@ public class CameraActivity extends Activity implements ActivityCompat.OnRequest
                             }).setNegativeButton("就不", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            Toast.makeText(CameraActivity.this,"用不了的",Toast.LENGTH_SHORT);
+                            Toast.makeText(CameraActivity.this,"用不了的",Toast.LENGTH_SHORT).show();
                         }
                     }).show();
                 }else {
@@ -62,22 +62,22 @@ public class CameraActivity extends Activity implements ActivityCompat.OnRequest
             Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             startActivityForResult(intent, CAMERA_REQUEST);
         }catch(Exception e){
-            Toast.makeText(this,e.getMessage(),Toast.LENGTH_SHORT);
+            Toast.makeText(this,e.getMessage(),Toast.LENGTH_SHORT).show();
             e.printStackTrace();
         }
     }
 
     public void onRequestPermissionsResult(int requestCode,  String[] permissions, int[] grantResults) {
-        Toast.makeText(this,"进入授权回调",Toast.LENGTH_SHORT);
+        Toast.makeText(this,"进入授权回调",Toast.LENGTH_SHORT).show();
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if(requestCode!=12)return;
         for(int p : grantResults){
             if(p!= PackageManager.PERMISSION_GRANTED){
-                Toast.makeText(this,"有权限没有开启哦~",Toast.LENGTH_SHORT);
+                Toast.makeText(this,"有权限没有开启哦~",Toast.LENGTH_SHORT).show();
                 return;
             }
         }
-        Toast.makeText(this,"授权成功，再点试试吧~",Toast.LENGTH_SHORT);
+        Toast.makeText(this,"授权成功，再点试试吧~",Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -89,7 +89,7 @@ public class CameraActivity extends Activity implements ActivityCompat.OnRequest
                 {
                       Bitmap bmp = (Bitmap)data.getExtras().get("data");
                       ivLifa.setImageBitmap(bmp);
-        //            Toast.makeText(CameraActivity.this,"camera ret",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CameraActivity.this,"camera ret",Toast.LENGTH_SHORT).show();
                 }
                 break;
         }
