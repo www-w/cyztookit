@@ -35,6 +35,8 @@ import android.app.PendingIntent;
 import androidx.core.app.NotificationManagerCompat;
 import android.os.Handler;
 import android.os.Message;
+import java.lang.ref.WeakReference;
+import android.os.Looper;
 
 
 /**
@@ -157,21 +159,7 @@ public class ThirdActivity extends android.app.Activity {
     }
     int progress=0;
     long mtid,ttid,htid;
-    private Handler handler=new Handler(new Handler.Callback(){
-        @Override
-        public boolean handleMessage(Message msg){
-            switch(msg.what){
-                case 1:
-                    progress++;
-                    sk.setProgress(progress);
-                    if(progress<100)handler.sendEmptyMessageDelayed(1,1000);
-                    htid=Thread.currentThread().getId();
-                    tvlog.setText("mtid:"+mtid+"\nttid:"+ttid+"\nhtid:"+htid);
-                    break;
-            }
-	    return false;
-        }
-    });
+    private Handler handler=new MyHandler(Looper.myLooper(),this);
     private void initView(){
         button1=findViewById(R.id.btnthi1);
         button2=findViewById(R.id.btnthi2);
@@ -184,7 +172,7 @@ public class ThirdActivity extends android.app.Activity {
         sk.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
             @Override
             public void onProgressChanged(SeekBar bar,int progress,boolean frombuser){
-                tvloading.setText("正在加载中："+progress+"%");
+                tvloading.setText(getString(R.string.thirdActivityLoading,progress));
                 pb.setProgress(progress);
                 pb.setVisibility(View.VISIBLE);
             }
@@ -277,5 +265,27 @@ public class ThirdActivity extends android.app.Activity {
         Log.d(tag,"onRestart");
     }
 
+    private static class MyHandler extends Handler {
+        private final WeakReference<ThirdActivity> mActivity;
+        private MyHandler(Looper lopr,ThirdActivity act){
+            super(lopr);
+            mActivity=new WeakReference<ThirdActivity>(act);
+        }
+        @Override
+        public void handleMessage(Message msg){
+            super.handleMessage(msg);
+            ThirdActivity activity = mActivity.get();
+            if(activity == null)return;
+            switch(msg.what){
+                case 1:
+                    activity.progress++;
+                    activity.sk.setProgress(activity.progress);
+                    if(activity.progress<100)activity.handler.sendEmptyMessageDelayed(1,1000);
+                    activity.htid=Thread.currentThread().getId();
+                    activity.tvlog.setText("mtid:"+activity.mtid+"\nttid:"+activity.ttid+"\nhtid:"+activity.htid);
+                    break;
+            }
+        }
+    }
 }
 

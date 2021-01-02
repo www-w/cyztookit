@@ -8,7 +8,7 @@
 
     <application
 	    android:allowBackup="false"
-        android:icon="@drawable/img"
+        android:icon="@drawable/logo"
         android:label="一个后台程序"
         android:theme="@style/AppTheme">
         <activity android:name=".ViewPagerActivity"

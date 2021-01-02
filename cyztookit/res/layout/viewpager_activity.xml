@@ -26,12 +26,14 @@
             android:text="地址："
             />
         <EditText
+            android:hint="hint"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:maxLines="1"
             android:inputType="text"
             android:id="@+id/et_address"
+            android:autofillHints="aa"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -39,12 +41,14 @@
             android:text="电话："
             />
         <EditText
+            android:hint="hint"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:maxLines="1"
             android:inputType="phone"
             android:id="@+id/et_phone"
+            android:autofillHints="aa"
             />
     </LinearLayout>
     <LinearLayout
@@ -122,14 +126,17 @@
         android:orientation="horizontal"
         android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
+        style="?android:attr/buttonBarStyle"
         >
         <Button
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="确定"
             android:id="@+id/btnok"
             />
         <Button
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="取消"

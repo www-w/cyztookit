@@ -22,6 +22,8 @@
             android:maxLines="1"
             android:inputType="text"
             android:id="@+id/et_name"
+            android:autofillHints="hint"
+            android:hint="hint"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -35,6 +37,8 @@
             android:maxLines="1"
             android:inputType="number"
             android:id="@+id/et_age"
+            android:autofillHints="hint"
+            android:hint="hint"
             />
     </LinearLayout>
     <LinearLayout
@@ -54,6 +58,8 @@
             android:maxLines="1"
             android:inputType="text"
             android:id="@+id/et_address"
+            android:autofillHints="hint"
+            android:hint="hint"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -62,11 +68,13 @@
             />
         <EditText
             android:layout_width="0dp"
+            android:hint="hint"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:maxLines="1"
             android:inputType="phone"
             android:id="@+id/et_phone"
+            android:autofillHints="hint"
             />
     </LinearLayout>
     <LinearLayout
@@ -144,17 +152,20 @@
         android:orientation="horizontal"
         android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
+        style="?android:attr/buttonBarStyle"
         >
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="确定"
             android:id="@+id/btnok"
+            style="?android:attr/buttonBarButtonStyle"
             />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="取消"
+            style="?android:attr/buttonBarButtonStyle"
             />
     </LinearLayout>
     <TextView
