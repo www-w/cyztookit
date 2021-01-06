@@ -282,7 +282,7 @@ public class ThirdActivity extends android.app.Activity {
                     activity.sk.setProgress(activity.progress);
                     if(activity.progress<100)activity.handler.sendEmptyMessageDelayed(1,1000);
                     activity.htid=Thread.currentThread().getId();
-                    activity.tvlog.setText("mtid:"+activity.mtid+"\nttid:"+activity.ttid+"\nhtid:"+activity.htid);
+                    activity.tvlog.setText(getString(R.string.thirdActivityLogText,activity.mtid,activity.ttid,activity.htid));
                     break;
             }
         }

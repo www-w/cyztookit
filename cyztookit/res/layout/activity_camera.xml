@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".CameraActivity">
     <Button
-        android:text="打开摄像头"
+        android:text="@string/activityCameraBtnOpenStr"
         android:onClick="btnOpenCamera"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
