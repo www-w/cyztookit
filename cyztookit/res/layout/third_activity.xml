@@ -13,7 +13,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center_horizontal"
-    android:text="正在加载中。。。"
+	android:text="@string/textLoading"
     android:textSize="18sp"
     android:textStyle="bold"
     />
@@ -33,7 +33,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center_horizontal"
-    android:text="正在加载中：0%"
+	android:text="@string/textLoading0"
     android:textSize="18sp"
     android:textStyle="bold"
     />
@@ -41,26 +41,26 @@
 <Button android:id="@+id/btnthi1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="模拟加载"
+	android:text="@string/thirdBtnSim"
     />
 <TextView
     android:id="@+id/tvlog"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center_horizontal"
-    android:text="调试信息"
+	android:text="@string/thirdDebugLog"
     android:textSize="18sp"
     android:textStyle="bold"
     />
 <Button android:id="@+id/btnthi2"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="open 2"
+	android:text="@string/btn2"
     />
 <Button android:id="@+id/btnthi3"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="open 4!"
+	android:text="@string/btn4"
     />
 </LinearLayout>
 

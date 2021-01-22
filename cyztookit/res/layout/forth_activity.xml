@@ -8,34 +8,34 @@
 <Button android:id="@+id/btnfour1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="普通对话框"
+	android:text="@string/dialogBtnNormal"
     />
 <Button android:id="@+id/btnfour2"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="单选列表对话框"
+	android:text="@string/dialogBtnSingleSelect"
     />
 <Button android:id="@+id/btnfour3"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="多选列表对话框"
+	android:text="@string/dialogBtnMultiSelect"
     />
 <Button 
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="自定义视图对话框"
+	android:text="@string/dialogBtnDiyView"
     android:onClick="btnDiyDialog"
     />
 <Button 
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="进度条对话框"
+	android:text="@string/dialogBtnProgress"
     android:onClick="btnProgressDialog"
     />
 <Button 
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="日期选择对话框"
+	android:text="@string/dialogBtnDatePicker"
     android:onClick="btnDatepickerDialog"
     />
 </LinearLayout>

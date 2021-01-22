@@ -12,7 +12,7 @@
 <TextView 
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="这是TextView的内容！"
+	android:text="@string/secondTVContent"
     android:textSize="18sp"
     android:textStyle="bold"
     android:textColor="#ff0000"
@@ -23,7 +23,7 @@
 <EditText
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:hint="输入提示！"
+	android:hint="@string/secondInputHint"
     android:inputType="phone"
     android:id="@+id/saipt"
     android:autofillHints="aaa"
@@ -31,7 +31,7 @@
 <Button 
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="提交"
+	android:text="@string/btnsubmit"
     />
 <!--android:textAlignment="center"
 android:layout_gravity="center"-->
@@ -40,7 +40,7 @@ android:layout_gravity="center"-->
     android:layout_height="280sp"
     android:src="@drawable/img"
     android:background="#ff0000"
-    android:contentDescription="image"
+	android:contentDescription="@string/imageHolder"
 
     />
     <LinearLayout
@@ -52,28 +52,28 @@ android:layout_gravity="center"-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="爱好："
+		android:text="@string/loginformHobby"
             />
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="足球"
+		android:text="@string/loginformHobbyBasket"
             android:checked="true"
             />
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="篮球"
+		android:text="@string/loginformHobbyMusic"
             />
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="游泳"
+		android:text="@string/loginformHobbyReading"
             />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="确定"
+		android:text="@string/btnok"
             />
     </LinearLayout>
     <LinearLayout
@@ -85,7 +85,7 @@ android:layout_gravity="center"-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="性别："
+		android:text="@string/loginformGender"
             />
         <RadioGroup
             android:layout_width="match_parent"
@@ -95,20 +95,20 @@ android:layout_gravity="center"-->
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="男"
+		android:text="@string/loginformGenderMale"
             />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="女"
+		android:text="@string/loginformGenderFeMale"
             />
         </RadioGroup>
     </LinearLayout>
     <ToggleButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textOn="oo"
-        android:textOff="ff"
+	    android:textOn="@string/texton"
+	    android:textOff="@string/textoff"
         android:background="@drawable/selector"
         android:checked="true"
         />

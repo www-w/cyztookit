@@ -3,18 +3,164 @@
     <string name="hello_activity_text_text">Hello, World!</string>
     <!-- ThirdActivity TextView Loading Progress -->
     <string name="thirdActivityLoading">
-        正在加载中：<xliff:g id="loadingnum" example="100">%1$n</xliff:g>%
+        正在加载中：<xliff:g id="loadingnum" example="100">%1$d</xliff:g>\%
     </string>
     <!-- ThirdActivity Log Text -->
     <string name="thirdActivityLogText">
-        mtid:<xliff:g id="MainThreadID" example="23">%1$n</xliff:g>\n
-        ttid:<xliff:g id="ThreadThreadID" example="33">%2$n</xliff:g>\n
-        htid:<xliff:g id="HandleThreadID" example="34">%3$n</xliff:g>
+        mtid:<xliff:g id="MainThreadID" example="23">%1$d</xliff:g>\n
+        ttid:<xliff:g id="ThreadThreadID" example="33">%2$d</xliff:g>\n
+        htid:<xliff:g id="HandleThreadID" example="34">%3$d</xliff:g>
     </string>
     <!-- activity_camera 打开摄像头按钮 -->
     <string name="activityCameraBtnOpenStr">
         打开摄像头
     </string>
     <!-- activity_camera 摄像头返回图片替代文本 -->
+    <string name="imageHolder">
+	    等待图片
+    </string>
+    <!-- dialog activity 按钮文本-->
+    <string name="dialogBtn">
+	    对话框按钮
+    </string>
+    <string name="dialogBtnNormal">
+	    普通对话框按钮
+    </string>
+    <string name="dialogBtnSingleSelect">
+	    单选列表对话框按钮
+    </string>
+    <string name="dialogBtnMultiSelect">
+	    多选列表对话框按钮
+    </string>
+    <string name="dialogBtnDiyView">
+	    自定义试图对话框
+    </string>
+    <string name="dialogBtnProgress">
+	    进度条对话框
+    </string>
+    <string name="dialogBtnDatePicker">
+	    日期选择对话框
+    </string>
+    <!-- 主菜单按钮文本 -->
+    <string name="helloSimpleLayout">
+	    简单布局组件
+    </string>
+    <string name="helloProcessBar">
+	    进度条组件
+    </string>
+    <string name="helloDialog">
+	    对话框组件
+    </string>
+    <string name="helloCamera">
+	    摄像头组件
+    </string>
+    <string name="helloSign">
+	    注册窗口
+    </string>
+    <string name="helloViewPager">
+	    轮播组件
+    </string>
+    <!-- 登录界面中的文本 -->
+    <string name="loginformName">
+	    姓名：
+    </string>
+    <string name="loginformNameHint">
+	    姓名HINT
+    </string>
+    <string name="loginformAge">
+	    年龄：
+    </string>
+    <string name="loginformAgeHint">
+	    年龄HINT
+    </string>
+    <string name="loginformAddress">
+	    地址：
+    </string>
+    <string name="loginformAddressHint">
+	    地址HINT
+    </string>
+    <string name="loginformTel">
+	    电话：
+    </string>
+    <string name="loginformTelHint">
+	    电话Hint
+    </string>
+    <string name="loginformGender">
+	    性别：
+    </string>
+    <string name="loginformGenderMale">
+	    男 
+    </string>
+    <string name="loginformGenderFeMale">
+	    女 
+    </string>
+    <string name="loginformHobby">
+	    爱好：
+    </string>
+    <string name="loginformHobbyMusic">
+	    音乐
+    </string>
+    <string name="loginformHobbyArt">
+	    艺术
+    </string>
+    <string name="loginformHobbyBasket">
+	    篮球
+    </string>
+    <string name="loginformHobbyReading">
+	    阅读
+    </string>
+    <!-- 全局按钮 -->
+    <string name="btnok">
+	    确定
+    </string>
+    <string name="btncancel">
+	    取消
+    </string>
+    <string name="btnsubmit">
+	    提交
+    </string>
+    <string name="globalMenu1">
+	    全局菜单1
+    </string>
+    <string name="globalMenu2">
+	    全局菜单2
+    </string>
+    <string name="texton">
+	    on
+    </string>
+    <string name="textoff">
+	    off
+    </string>
+    <string name="textLoading">
+	    正在加载中&#8230;
+    </string>
+    <string name="textLoading0">
+	    正在加载中：0%
+    </string>
+    <!-- second activity 中的一些内容 -->
+    <string name="secondTVContent">
+	    这是TextView中的内容
+    </string>
+    <string name="secondInputHint">
+	    输入提示
+    </string>
+    <!-- third activity 中的一些内容 -->
+    <string name="thirdBtnSim">
+	    模拟加载
+    </string>
+    <string name="thirdDebugLog">
+	    调试信息
+    </string>
+    <string name="btn2">
+	    按钮2
+    </string>
+    <string name="btn3">
+	    按钮3
+    </string>
+    <string name="btn4">
+	    按钮4
+    </string>
+
+    
 
 </resources>

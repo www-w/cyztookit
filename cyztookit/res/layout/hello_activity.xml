@@ -13,32 +13,32 @@
 <Button android:id="@+id/button1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="简单布局组件!"
+	android:text="@string/helloSimpleLayout"
     />
 <Button android:id="@+id/btnhel1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="ProgressBar"
+	android:text="@string/helloProcessBar"
     />
 <Button android:id="@+id/btnhel2"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="对话框组件"
+	android:text="@string/helloDialog"
     />
 <Button android:id="@+id/btnhel3"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="摄像头调用"
+	android:text="@string/helloCamera"
     />
 <Button android:id="@+id/buttonOpenDialog"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="注册窗口"
+	android:text="@string/helloSign"
     />
 <Button android:id="@+id/buttonOpenViewPager"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="轮播ViewPager2"
+	android:text="@string/helloViewPager"
     />
 </LinearLayout>
 

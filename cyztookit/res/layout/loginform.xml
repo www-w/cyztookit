@@ -13,7 +13,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="姓名："
+		android:text="@string/loginformName"
             />
         <EditText
             android:layout_width="0dp"
@@ -23,12 +23,12 @@
             android:inputType="text"
             android:id="@+id/et_name"
             android:autofillHints="hint"
-            android:hint="hint"
+		android:hint="@string/loginformNameHint"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="年龄："
+		android:text="@string/loginformAge"
             />
         <EditText
             android:layout_width="0dp"
@@ -38,7 +38,7 @@
             android:inputType="number"
             android:id="@+id/et_age"
             android:autofillHints="hint"
-            android:hint="hint"
+		android:hint="@string/loginformAgeHint"
             />
     </LinearLayout>
     <LinearLayout
@@ -49,7 +49,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="地址："
+		android:text="@string/loginformAddress"
             />
         <EditText
             android:layout_width="0dp"
@@ -59,22 +59,22 @@
             android:inputType="text"
             android:id="@+id/et_address"
             android:autofillHints="hint"
-            android:hint="hint"
+		android:hint="@string/loginformAddressHint"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="电话："
+		android:text="@string/loginformTel"
             />
         <EditText
             android:layout_width="0dp"
-            android:hint="hint"
+		android:hint="@string/loginformTelHint"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:maxLines="1"
             android:inputType="phone"
             android:id="@+id/et_phone"
-            android:autofillHints="hint"
+		android:autofillHints="@string/loginformTelHint"
             />
     </LinearLayout>
     <LinearLayout
@@ -87,7 +87,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="性别："
+		android:text="@string/loginformGender"
             />
         <RadioGroup
             android:layout_width="wrap_content"
@@ -98,13 +98,13 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="男"
+		    android:text="@string/loginformGenderMale"
                 android:id="@+id/rg_gender_male"
                 />
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="女"
+		    android:text="@string/loginformGenderFeMale"
                 android:id="@+id/rg_gender_female"
                 />
         </RadioGroup>
@@ -119,30 +119,30 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="爱好："
+		android:text="@string/loginformHobby"
             />
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="音乐"
+		android:text="@string/loginformHobbyMusic"
             android:id="@+id/cb_music"
             />
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="艺术"
+		android:text="@string/loginformHobbyArt"
             android:id="@+id/cb_art"
             />
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="篮球"
+		android:text="@string/loginformHobbyBasket"
             android:id="@+id/cb_basketball"
             />
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="阅读"
+		android:text="@string/loginformHobbyReading"
             android:id="@+id/cb_reading"
             />
     </LinearLayout>
@@ -157,14 +157,14 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="确定"
+		android:text="@string/btnok"
             android:id="@+id/btnok"
             style="?android:attr/buttonBarButtonStyle"
             />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="取消"
+		android:text="@string/btncancel"
             style="?android:attr/buttonBarButtonStyle"
             />
     </LinearLayout>
