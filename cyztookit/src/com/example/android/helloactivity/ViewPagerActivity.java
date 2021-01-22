@@ -44,16 +44,16 @@ public class ViewPagerActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        try{
+        //try{
             setContentView(R.layout.viewpager_activity);
-        }catch(Exception e){
+        /*}catch(Exception e){
             Toast.makeText(ViewPagerActivity.this,e.getMessage(),Toast.LENGTH_SHORT).show();
             tag=e.getMessage();
             e.printStackTrace();
-        }
-        setContentView(R.layout.hello_activity);
-        TextView tv=findViewById(R.id.text);
-        tv.setText(tag);
+        }*/
+        //setContentView(R.layout.hello_activity);
+        //TextView tv=findViewById(R.id.text);
+        //tv.setText(tag);
 
         initView();
     }
