@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.helloactivity"
+    android:targetSandboxVersion="2"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="30" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="false"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@drawable/logo"
+        android:label="一个后台程序"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.example.android.helloactivity.ViewPagerActivity" />
+        <activity android:name="com.example.android.helloactivity.CameraActivity" />
+        <activity android:name="com.example.android.helloactivity.LoginFormActivity" />
+        <activity
+            android:name="com.example.android.helloactivity.HelloActivity"
+            android:launchMode="singleInstance" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.helloactivity.SecondActivity"
+            android:launchMode="standard" >
+            <intent-filter>
+                <action android:name="com.topv1.START_UP" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.helloactivity.DialogActivity"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="com.topv1.START_DIALOG" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.android.helloactivity.ThirdActivity" >
+            <intent-filter>
+                <action android:name="com.topv1.START_THIRD" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.helloactivity.ForthActivity"
+            android:launchMode="singleInstance" >
+            <intent-filter>
+                <action android:name="com.topv1.START_FORTH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

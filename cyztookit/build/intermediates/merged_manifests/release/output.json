@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "applicationId": "com.example.android.helloactivity",
+  "variantType": "BASE_APK",
+  "elements": [
+    {
+      "outputType": {
+        "type": "MERGED_MANIFESTS"
+      },
+      "apkData": {
+        "type": "MAIN",
+        "splits": [],
+        "versionCode": 1,
+        "versionName": "1.0",
+        "outputFile": "cyztookit-release-unsigned.apk",
+        "fullName": "release",
+        "baseName": "release",
+        "dirName": ""
+      },
+      "path": "AndroidManifest.xml",
+      "properties": {
+        "packageId": "com.example.android.helloactivity",
+        "split": "",
+        "minSdkVersion": "16"
+      }
+    }
+  ]
+}

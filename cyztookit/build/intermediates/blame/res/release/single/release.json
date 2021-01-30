@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "/home/aistudio/cyztookit/cyztookit/build/intermediates/res/merged/release/layout_hello_activity.xml.flat",
+        "source": "/home/aistudio/cyztookit/cyztookit/res/layout/hello_activity.xml"
+    },
+    {
+        "merged": "/home/aistudio/cyztookit/cyztookit/build/intermediates/res/merged/release/drawable-xhdpi_img.jpg.flat",
+        "source": "/home/aistudio/cyztookit/cyztookit/res/drawable-xhdpi/img.jpg"
+    },
+    {
+        "merged": "/home/aistudio/cyztookit/cyztookit/build/intermediates/res/merged/release/layout_activity_camera.xml.flat",
+        "source": "/home/aistudio/cyztookit/cyztookit/res/layout/activity_camera.xml"
+    },
+    {
+        "merged": "/home/aistudio/cyztookit/cyztookit/build/intermediates/res/merged/release/layout_dialog_activity.xml.flat",
+        "source": "/home/aistudio/cyztookit/cyztookit/res/layout/dialog_activity.xml"
+    },
+    {
+        "merged": "/home/aistudio/cyztookit/cyztookit/build/intermediates/res/merged/release/drawable-xhdpi_logo.png.flat",
+        "source": "/home/aistudio/cyztookit/cyztookit/res/drawable-xhdpi/logo.png"
+    },
+    {
+        "merged": "/home/aistudio/cyztookit/cyztookit/build/intermediates/res/merged/release/drawable-xhdpi_toggle_on.png.flat",
+        "source": "/home/aistudio/cyztookit/cyztookit/res/drawable-xhdpi/toggle_on.png"
+    },
+    {
+        "merged": "/home/aistudio/cyztookit/cyztookit/build/intermediates/res/merged/release/drawable-xhdpi_selector.xml.flat",
+        "source": "/home/aistudio/cyztookit/cyztookit/res/drawable-xhdpi/selector.xml"
+    },
+    {
+        "merged": "/home/aistudio/cyztookit/cyztookit/build/intermediates/res/merged/release/layout_third_activity.xml.flat",
+        "source": "/home/aistudio/cyztookit/cyztookit/res/layout/third_activity.xml"
+    },
+    {
+        "merged": "/home/aistudio/cyztookit/cyztookit/build/intermediates/res/merged/release/menu_menu.xml.flat",
+        "source": "/home/aistudio/cyztookit/cyztookit/res/menu/menu.xml"
+    },
+    {
+        "merged": "/home/aistudio/cyztookit/cyztookit/build/intermediates/res/merged/release/drawable-xhdpi_toggle_off.png.flat",
+        "source": "/home/aistudio/cyztookit/cyztookit/res/drawable-xhdpi/toggle_off.png"
+    },
+    {
+        "merged": "/home/aistudio/cyztookit/cyztookit/build/intermediates/res/merged/release/layout_loginform.xml.flat",
+        "source": "/home/aistudio/cyztookit/cyztookit/res/layout/loginform.xml"
+    },
+    {
+        "merged": "/home/aistudio/cyztookit/cyztookit/build/intermediates/res/merged/release/layout_second_activity.xml.flat",
+        "source": "/home/aistudio/cyztookit/cyztookit/res/layout/second_activity.xml"
+    },
+    {
+        "merged": "/home/aistudio/cyztookit/cyztookit/build/intermediates/res/merged/release/layout_viewpager_activity.xml.flat",
+        "source": "/home/aistudio/cyztookit/cyztookit/res/layout/viewpager_activity.xml"
+    },
+    {
+        "merged": "/home/aistudio/cyztookit/cyztookit/build/intermediates/res/merged/release/layout_loading_dialog.xml.flat",
+        "source": "/home/aistudio/cyztookit/cyztookit/res/layout/loading_dialog.xml"
+    },
+    {
+        "merged": "/home/aistudio/cyztookit/cyztookit/build/intermediates/res/merged/release/layout_forth_activity.xml.flat",
+        "source": "/home/aistudio/cyztookit/cyztookit/res/layout/forth_activity.xml"
+    }
+]
