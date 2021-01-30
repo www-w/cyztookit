@@ -1,0 +1,3 @@
+#!/data/data/com.termux/files/usr/bin/bash
+git pull
+termux-open cyztookit/build/outputs/apk/debug/cyztookit-debug.apk
