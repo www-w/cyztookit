@@ -1,6 +1,6 @@
 #!/bin/bash
 git pull
-./gradlew assambly
+./gradlew assemble
 git add .
 git commit -m "build"
 git push
