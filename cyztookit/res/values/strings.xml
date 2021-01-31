@@ -160,6 +160,9 @@
     <string name="btn4">
 	    按钮4
     </string>
+    <string name="example_fragment_simpletxt">
+        Hello Fragment!
+    </string>
 
     
 
