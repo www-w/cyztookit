@@ -2,6 +2,7 @@ package com.example.android.helloactivity;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.os.Bundle;
+import androidx.fragment.app.Fragment;
 
 public class ExampleFragment2 extends Fragment{
     @Override
