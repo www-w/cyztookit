@@ -1,5 +1,4 @@
 package com.example.android.helloactivity;
-import androidx.fragment.app;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.os.Bundle;

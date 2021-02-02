@@ -1,10 +1,9 @@
 package com.example.android.helloactivity;
-import androidx.fragment.app;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.os.Bundle;
 
-public static class ExampleFragment extends Fragment{
+public class ExampleFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater,ViewGroup container,
             Bundle savedInstanceState){
