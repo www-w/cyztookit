@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import androidx.core.app.ActivityCompat;
 
-public class ExampleFragmentActivity extends ActivityCompat{
+public class ExampleFragmentActivity extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
