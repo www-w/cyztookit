@@ -3,6 +3,7 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
+import android.view.View;
 
 public class ExampleFragment2 extends Fragment{
     @Override
