@@ -2802,10 +2802,14 @@
 	    按钮3
     </string><string name="btn4">
 	    按钮4
+    </string><string name="example_fragment_simpletxt">
+        Hello Fragment!
+    </string><string name="btnExampleFragment">
+	    Fragment Test
     </string></file><file path="/home/aistudio/cyztookit/cyztookit/res/values/styles.xml" qualifiers=""><style name="AppTheme" parent="android:Theme.Holo.Light">
     </style></file><file path="/home/aistudio/cyztookit/cyztookit/res/values/values.xml" qualifiers=""><declare-styleable name="ViewPager2">
         <attr name="android:orientation"/>
-    </declare-styleable></file><file name="menu" path="/home/aistudio/cyztookit/cyztookit/res/menu/menu.xml" qualifiers="" type="menu"/></source><source path="/home/aistudio/cyztookit/cyztookit/build/generated/res/rs/release"/><source path="/home/aistudio/cyztookit/cyztookit/build/generated/res/resValues/release"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="release$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/home/aistudio/cyztookit/cyztookit/build-types/release/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="release" generated-set="release$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/home/aistudio/cyztookit/cyztookit/build-types/release/res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="AlertDialog">
+    </declare-styleable></file><file name="menu" path="/home/aistudio/cyztookit/cyztookit/res/menu/menu.xml" qualifiers="" type="menu"/><file name="example_fragment" path="/home/aistudio/cyztookit/cyztookit/res/layout/example_fragment.xml" qualifiers="" type="layout"/><file name="activity_fragmenttest" path="/home/aistudio/cyztookit/cyztookit/res/layout/activity_fragmenttest.xml" qualifiers="" type="layout"/><file name="example_fragment2" path="/home/aistudio/cyztookit/cyztookit/res/layout/example_fragment2.xml" qualifiers="" type="layout"/></source><source path="/home/aistudio/cyztookit/cyztookit/build/generated/res/rs/release"/><source path="/home/aistudio/cyztookit/cyztookit/build/generated/res/resValues/release"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="release$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/home/aistudio/cyztookit/cyztookit/build-types/release/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="release" generated-set="release$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/home/aistudio/cyztookit/cyztookit/build-types/release/res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="AlertDialog">
         <attr name="android:layout"/>
         <attr format="reference" name="buttonPanelSideLayout"/>
         <attr format="reference" name="listLayout"/>

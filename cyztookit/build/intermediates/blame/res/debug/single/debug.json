@@ -16,6 +16,10 @@
         "source": "/home/aistudio/cyztookit/cyztookit/res/layout/loading_dialog.xml"
     },
     {
+        "merged": "/home/aistudio/cyztookit/cyztookit/build/intermediates/res/merged/debug/layout_example_fragment.xml.flat",
+        "source": "/home/aistudio/cyztookit/cyztookit/res/layout/example_fragment.xml"
+    },
+    {
         "merged": "/home/aistudio/cyztookit/cyztookit/build/intermediates/res/merged/debug/layout_loginform.xml.flat",
         "source": "/home/aistudio/cyztookit/cyztookit/res/layout/loginform.xml"
     },
@@ -48,8 +52,16 @@
         "source": "/home/aistudio/cyztookit/cyztookit/res/menu/menu.xml"
     },
     {
+        "merged": "/home/aistudio/cyztookit/cyztookit/build/intermediates/res/merged/debug/layout_activity_fragmenttest.xml.flat",
+        "source": "/home/aistudio/cyztookit/cyztookit/res/layout/activity_fragmenttest.xml"
+    },
+    {
         "merged": "/home/aistudio/cyztookit/cyztookit/build/intermediates/res/merged/debug/drawable-xhdpi_selector.xml.flat",
         "source": "/home/aistudio/cyztookit/cyztookit/res/drawable-xhdpi/selector.xml"
+    },
+    {
+        "merged": "/home/aistudio/cyztookit/cyztookit/build/intermediates/res/merged/debug/layout_example_fragment2.xml.flat",
+        "source": "/home/aistudio/cyztookit/cyztookit/res/layout/example_fragment2.xml"
     },
     {
         "merged": "/home/aistudio/cyztookit/cyztookit/build/intermediates/res/merged/debug/layout_activity_camera.xml.flat",

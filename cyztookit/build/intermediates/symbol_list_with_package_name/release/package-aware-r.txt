@@ -757,6 +757,7 @@ id barrier
 id beginning
 id blocking
 id bottom
+id btnExampleFragment
 id btnfour1
 id btnfour2
 id btnfour3
@@ -801,6 +802,8 @@ id et_phone
 id expand_activities_button
 id expanded_menu
 id forever
+id fragleft
+id fragright
 id gone
 id group_divider
 id groups
@@ -951,8 +954,11 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_camera
+layout activity_fragmenttest
 layout custom_dialog
 layout dialog_activity
+layout example_fragment
+layout example_fragment2
 layout forth_activity
 layout hello_activity
 layout loading_dialog
@@ -1002,6 +1008,7 @@ string activityCameraBtnOpenStr
 string btn2
 string btn3
 string btn4
+string btnExampleFragment
 string btncancel
 string btnok
 string btnsubmit
@@ -1012,6 +1019,7 @@ string dialogBtnMultiSelect
 string dialogBtnNormal
 string dialogBtnProgress
 string dialogBtnSingleSelect
+string example_fragment_simpletxt
 string globalMenu1
 string globalMenu2
 string helloCamera

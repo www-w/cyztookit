@@ -2,6 +2,22 @@
 <issues format="5" by="lint 4.0.1">
 
     <issue
+        id="DisableBaselineAlignment"
+        severity="Warning"
+        message="Set `android:baselineAligned=&quot;false&quot;` on this element for better performance"
+        category="Performance"
+        priority="3"
+        summary="Missing `baselineAligned` attribute"
+        explanation="When a LinearLayout is used to distribute the space proportionally between nested layouts, the baseline alignment property should be turned off to make the layout computation faster."
+        errorLine1="&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2=" ~~~~~~~~~~~~">
+        <location
+            file="/home/aistudio/cyztookit/cyztookit/res/layout/activity_fragmenttest.xml"
+            line="2"
+            column="2"/>
+    </issue>
+
+    <issue
         id="IconMissingDensityFolder"
         severity="Warning"
         message="Missing density variation folders in `res`: drawable-hdpi, drawable-mdpi, drawable-xxhdpi"
