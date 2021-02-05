@@ -37,6 +37,7 @@ public class HelloActivity extends android.app.Activity {
     private Button btnhel2;
     private Button btnhel3;
     private Button buttonOpenViewPager;
+    private Button btnExampleFragment;
 
 
     /**
@@ -63,6 +64,14 @@ public class HelloActivity extends android.app.Activity {
         btnhel2=findViewById(R.id.btnhel2);
         btnhel3=findViewById(R.id.btnhel3);
         buttonOpenViewPager = findViewById(R.id.buttonOpenViewPager);
+	btnExampleFragment=findViewById(R.id.btnExampleFragment);
+        btnExampleFragment.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(HelloActivity.this,ExampleFragmentActivity.class);
+		startActivity(intent);
+	    }
+	});
         buttonOpenViewPager.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){

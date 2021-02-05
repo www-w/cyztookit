@@ -163,6 +163,9 @@
     <string name="example_fragment_simpletxt">
         Hello Fragment!
     </string>
+    <string name="btnExampleFragment">
+	    Fragment Test
+    </string>
 
     
 
