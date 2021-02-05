@@ -69,7 +69,12 @@ public class HelloActivity extends android.app.Activity {
             @Override
             public void onClick(View view){
                 Intent intent = new Intent(HelloActivity.this,ExampleFragmentActivity.class);
-		startActivity(intent);
+                try{
+                    startActivity(intent);
+                }catch(Exception e){
+                    Toast.makeText(HelloActivity.this,e.getMessage(),Toast.LENGTH_SHORT).show();
+                    e.printStackTrace();
+                }
 	    }
 	});
         buttonOpenViewPager.setOnClickListener(new View.OnClickListener(){
