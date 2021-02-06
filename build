@@ -1,6 +1,5 @@
 #!/bin/bash
 git pull
 ./gradlew assemble
-git add .
-git commit -m "build"
-git push
+cp cyztookit/build/outputs/apk/debug/cyztookit-debug.apk ..
+
