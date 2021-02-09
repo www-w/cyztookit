@@ -27,6 +27,9 @@ public class LogActivity extends Activity {
     private EditText etlog;
     private void initView() {
         etlog = findViewById(R.id.etlog);
+	ExeCommand exe=new ExeCommand().run("logcat -d");
+	etlog.setText(exe.getResult());
+
     }
 
 }
