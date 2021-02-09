@@ -7,14 +7,14 @@
     android:orientation="horizontal"
     android:baselineAligned="false"
     >
-<fragment
+<androidx.fragment.app.FragmentContainerView
 	android:name="com.example.android.helloactivity.ExampleFragment"
 	android:layout_weight="1"
 	android:layout_width="0dp"
 	android:layout_height="match_parent"
 	android:id="@+id/fragleft"
 	/>
-<fragment
+<androidx.fragment.app.FragmentContainerView
 	android:name="com.example.android.helloactivity.ExampleFragment2"
 	android:layout_weight="1"
 	android:layout_width="0dp"
