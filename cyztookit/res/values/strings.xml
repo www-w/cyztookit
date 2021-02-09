@@ -166,6 +166,9 @@
     <string name="btnExampleFragment">
 	    Fragment Test
     </string>
+    <string name="btnLog">
+	    Log Activity
+    </string>
 
     
 

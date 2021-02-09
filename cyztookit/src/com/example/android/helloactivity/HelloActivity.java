@@ -63,8 +63,16 @@ public class HelloActivity extends android.app.Activity {
         btnhel1=findViewById(R.id.btnhel1);
         btnhel2=findViewById(R.id.btnhel2);
         btnhel3=findViewById(R.id.btnhel3);
+	Button btnLog = findViewById(R.id.btnLog);
         buttonOpenViewPager = findViewById(R.id.buttonOpenViewPager);
 	btnExampleFragment=findViewById(R.id.btnExampleFragment);
+	btnLog.setOnClickListener(new View.OnClickListener(){
+		@Override
+		public void onClick(View view){
+			Intent intent=new Intent(HelloActivity.this,LogActivity.class);
+			startActivity(intent);
+		}
+	});
         btnExampleFragment.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
