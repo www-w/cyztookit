@@ -7,7 +7,7 @@
     android:orientation="vertical"
     >
     <EditText
-	    android:inputType="text"
+	    android:inputType="textMultiLine"
 	    android:id="@+id/etlog"
 	    android:layout_width="match_parent"
 	    android:layout_height="match_parent"
