@@ -169,6 +169,12 @@
     <string name="btnLog">
 	    Log Activity
     </string>
+    <string name="activityFragTestBtnAdd">
+	    Add Fragment
+    </string>
+    <string name="activityFragTestBtnReplace">
+	    替换Fragment
+    </string>
 
     
 

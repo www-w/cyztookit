@@ -4,9 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+	>
+<Button
+	android:id="@+id/fragtestbtnadd"
+        android:text="@string/activityFragTestBtnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+	/>
+<Button
+	android:id="@+id/fragtestbtnreplace"
+        android:text="@string/activityFragTestBtnReplace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+	/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="horizontal"
     android:baselineAligned="false"
-    >
+	>
+
 <androidx.fragment.app.FragmentContainerView
 	android:name="com.example.android.helloactivity.ExampleFragment"
 	android:layout_weight="1"
@@ -22,4 +40,5 @@
 	android:id="@+id/fragright"
 	/>
 
+</LinearLayout>
 </LinearLayout>
