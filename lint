@@ -1,0 +1,3 @@
+#!/bin/sh
+./gradlew lint
+cp ./cyztookit/build/reports/lint-results.html ~
