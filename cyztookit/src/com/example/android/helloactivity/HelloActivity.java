@@ -63,16 +63,24 @@ public class HelloActivity extends android.app.Activity {
         btnhel1=findViewById(R.id.btnhel1);
         btnhel2=findViewById(R.id.btnhel2);
         btnhel3=findViewById(R.id.btnhel3);
-	Button btnLog = findViewById(R.id.btnLog);
+        Button btnLog = findViewById(R.id.btnLog);
         buttonOpenViewPager = findViewById(R.id.buttonOpenViewPager);
-	btnExampleFragment=findViewById(R.id.btnExampleFragment);
-	btnLog.setOnClickListener(new View.OnClickListener(){
-		@Override
-		public void onClick(View view){
-			Intent intent=new Intent(HelloActivity.this,LogActivity.class);
-			startActivity(intent);
-		}
-	});
+        btnExampleFragment=findViewById(R.id.btnExampleFragment);
+        Button btnImgDFinder = findViewById(R.id.btnImgDFinder);
+        btnImgDFinder.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(HelloActivity.this,ImageDFinderActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnLog.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent=new Intent(HelloActivity.this,LogActivity.class);
+                startActivity(intent);
+            }
+        });
         btnExampleFragment.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -83,8 +91,8 @@ public class HelloActivity extends android.app.Activity {
                     Toast.makeText(HelloActivity.this,e.getMessage(),Toast.LENGTH_SHORT).show();
                     e.printStackTrace();
                 }
-	    }
-	});
+            }
+        });
         buttonOpenViewPager.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -106,7 +114,7 @@ public class HelloActivity extends android.app.Activity {
                 //Intent intent = new Intent(HelloActivity.this,HelloActivity.class);
                 Intent intent = new Intent("com.topv1.START_UP");
                 //intent.putExtra("ddd","这是数据，，！");
-                
+
                 //Intent intent = new Intent();
                 //intent.setAction(Intent.ACTION_CALL);
                 //intent.setAction(Intent.ACTION_DIAL);

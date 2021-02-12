@@ -175,6 +175,9 @@
     <string name="activityFragTestBtnReplace">
 	    替换Fragment
     </string>
+    <string name="btnImgDFinder">
+	    图片找茬辅助工具
+    </string>
 
     
 
