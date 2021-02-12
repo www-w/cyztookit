@@ -33,6 +33,12 @@
 	android:id="@+id/fragleft"
 	/>
 <androidx.fragment.app.FragmentContainerView
+	android:layout_weight="1"
+	android:layout_width="0dp"
+	android:layout_height="match_parent"
+	android:id="@+id/fragcenter"
+	/>
+<androidx.fragment.app.FragmentContainerView
 	android:name="com.example.android.helloactivity.ExampleFragment2"
 	android:layout_weight="1"
 	android:layout_width="0dp"

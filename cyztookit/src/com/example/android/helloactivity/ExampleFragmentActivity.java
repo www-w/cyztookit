@@ -34,7 +34,7 @@ public class ExampleFragmentActivity extends AppCompatActivity{
 				FragmentManager fragmentManager = getSupportFragmentManager();
 				FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 				ExampleFragment fragment = new ExampleFragment();
-				fragmentTransaction.add(R.id.fragleft, fragment);
+				fragmentTransaction.add(R.id.fragcenter, fragment);
 				fragmentTransaction.commit();
 			}
 
