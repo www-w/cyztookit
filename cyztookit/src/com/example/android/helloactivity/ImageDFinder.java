@@ -20,7 +20,7 @@ public class ImageDFinder{
                     bi.setPixel(col,row,Color.RED);
                 }
 		else{
-			bi.setPixel(col,row,bi.getPixel(col,row)&0xf0ffffff);
+			bi.setPixel(col,row,bi.getPixel(col,row)<<1);
 		}
             }
         }
