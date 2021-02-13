@@ -34,9 +34,6 @@ public class ImageDFinder{
         }
         */
     }
-    private float rgbDeference(Color a,Color b){
-        return Math.abs(a.red()-b.red())+Math.abs(a.green()-b.green())+Math.abs(a.blue()-b.blue());
-    }
     private int rgbDeference(int a,int b){
         int x1,x2,sum=0;
         // r
