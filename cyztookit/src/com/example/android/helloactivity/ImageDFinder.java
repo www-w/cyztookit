@@ -16,7 +16,7 @@ public class ImageDFinder{
             int row=startY+r;
             int row2=(int)Math.round(scale*r)+startY2;
             for(int col=0;col<bi.getWidth();col++){
-                if(rgbDeference(bi.getPixel(col,row),bi.getPixel(col,row2))>20){
+                if(rgbDeference(bi.getPixel(col,row),bi.getPixel(col,row2))>25){
                     bi.setPixel(col,row,Color.RED);
                 }
 		else{
