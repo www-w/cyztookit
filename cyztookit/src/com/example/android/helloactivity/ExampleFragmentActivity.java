@@ -39,6 +39,25 @@ public class ExampleFragmentActivity extends AppCompatActivity{
 			}
 
 		});
+		btnReplace.setOnClickListener(new View.OnClickListener(){
+			@Override
+			public void onClick(View view){
+				FragmentManager fragmentManager = getSupportFragmentManager();
+				FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+				// Create new fragment and transaction
+				Fragment newFragment = new ExampleFragment2();
+				FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+				// Replace whatever is in the fragment_container view with this fragment,
+				// and add the transaction to the back stack
+				transaction.replace(R.id.fragcenter, newFragment);
+				transaction.addToBackStack(null);
+
+				// Commit the transaction
+				transaction.commit();
+			}
+
+		});
 	}
 
 }
