@@ -178,6 +178,9 @@
     <string name="btnImgDFinder">
 	    图片找茬辅助工具
     </string>
+    <string name="btnViewModelTest">
+	    ViewModel Test
+    </string>
 
     
 

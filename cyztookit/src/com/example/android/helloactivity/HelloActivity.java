@@ -66,6 +66,14 @@ public class HelloActivity extends android.app.Activity {
         Button btnLog = findViewById(R.id.btnLog);
         buttonOpenViewPager = findViewById(R.id.buttonOpenViewPager);
         btnExampleFragment=findViewById(R.id.btnExampleFragment);
+		var btnViewModelTest = findViewById(R.id.btnViewModelTest);
+        btnViewModelTest.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(HelloActivity.this,ViewModelActivity.class);
+                startActivity(intent);
+            }
+        });
         Button btnImgDFinder = findViewById(R.id.btnImgDFinder);
         btnImgDFinder.setOnClickListener(new View.OnClickListener(){
             @Override

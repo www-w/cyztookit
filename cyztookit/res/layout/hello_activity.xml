@@ -55,5 +55,10 @@
 	android:layout_height="wrap_content"
 	android:text="@string/btnImgDFinder"
 	/>
+<Button android:id="@+id/btnViewModelTest"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:text="@string/btnViewModelTest"
+	/>
 </LinearLayout>
 
