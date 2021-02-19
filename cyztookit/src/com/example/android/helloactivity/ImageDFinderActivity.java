@@ -31,6 +31,7 @@ import java.io.InputStream;
 import android.graphics.ImageDecoder;
 import android.graphics.BitmapFactory;
 import android.content.ContentResolver;
+import android.graphics.drawable.BitmapDrawable;
 
 public class ImageDFinderActivity extends AppCompatActivity{
     private static final String[] needPermissions={
@@ -96,7 +97,7 @@ public class ImageDFinderActivity extends AppCompatActivity{
         if(!hasPermission())return;
         tv.setText(getLastPhotoByPath(this).toString());
         ImageDFinder idf = new ImageDFinder(getBitmap(getLastPhotoByPath(this)));
-        imgfinderImgView.setImageBitmap(idf.CompareVerticalSplit(370,1021,1049,637D/651D));
+		tv.setCompoundDrawables(null,null,null,new BitmapDrawable(idf.CompareVerticalSplit(370,1021,1049,637D/651D)));
     }
 
     TextView tv;
