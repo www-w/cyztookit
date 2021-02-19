@@ -97,7 +97,7 @@ public class ImageDFinderActivity extends AppCompatActivity{
         if(!hasPermission())return;
         tv.setText(getLastPhotoByPath(this).toString());
         ImageDFinder idf = new ImageDFinder(getBitmap(getLastPhotoByPath(this)));
-		tv.setCompoundDrawables(null,null,null,new BitmapDrawable(idf.CompareVerticalSplit(370,1021,1049,637D/651D)));
+		tv.setCompoundDrawables(null,null,null,new BitmapDrawable(getResources(),idf.CompareVerticalSplit(370,1021,1049,637D/651D)));
     }
 
     TextView tv;
