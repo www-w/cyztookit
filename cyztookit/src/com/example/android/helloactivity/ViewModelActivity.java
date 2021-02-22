@@ -35,6 +35,9 @@ public class ViewModelActivity extends AppCompatActivity{
 		myvm.getTxtB().observe(this,a->{
 			viewmodeltxtb.setText(a);
 		});
+		myvm.getTxtC().observe(this,a->{
+			viewmodeltxtc.setText(a);
+		});
 	}
 	TextView viewmodeltxta;
 	TextView viewmodeltxtb;
