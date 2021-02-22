@@ -5,6 +5,7 @@ public class MyViewModel extends ViewModel{
 	private MutableLiveData<String> txta;
 	public MutableLiveData<String> getTxtA(){
 		if(txta==null)txta=new MutableLiveData<String>("init val");
+		txta.setValue("initB value");
 		return txta;
 	}
 
