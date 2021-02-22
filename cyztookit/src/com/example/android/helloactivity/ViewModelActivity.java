@@ -19,17 +19,36 @@ import androidx.fragment.app.Fragment;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.lifecycle.ViewModelProvider;
 
 public class ViewModelActivity extends AppCompatActivity{
+	MyViewModel myvm;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_viewmodel);
 		initView();
+		myvm=new ViewModelProvider(this).get(MyViewModel.class);
+		myvm.getTxtA().observe(this,a->{
+			viewmodeltxta.setText(a);
+		});
 	}
+	TextView viewmodeltxta;
+	TextView viewmodeltxtb;
+	TextView viewmodeltxtc;
 	void initView(){
-		TextView viewmodeltxta = findViewById(R.id.viewmodeltxta);
-		TextView viewmodeltxtb = findViewById(R.id.viewmodeltxtb);
+		viewmodeltxta = findViewById(R.id.viewmodeltxta);
+		viewmodeltxtb = findViewById(R.id.viewmodeltxtb);
+		viewmodeltxtc = findViewById(R.id.viewmodeltxtc);
+		Button viewmodelBtnA=findViewById(R.id.viewmodelBtnA);
+		viewmodelBtnA.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+				myvm.getTxtA().setValue("click changed");
+            }
+        })
+
 	}
+
 
 }
