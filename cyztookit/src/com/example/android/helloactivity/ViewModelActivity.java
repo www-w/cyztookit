@@ -46,7 +46,7 @@ public class ViewModelActivity extends AppCompatActivity{
             public void onClick(View view){
 				myvm.getTxtA().setValue("click changed");
             }
-        })
+        });
 
 	}
 
