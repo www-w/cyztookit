@@ -9,7 +9,7 @@ public class MyViewModel extends ViewModel{
 		return "trans a:"+a;
 	});
 	private LiveData<String> txtc=Transformations.switchMap(txta,a->{
-		return new LiveData<String>("map a:"+a);
+		return new MutableLiveData<String>("map a:"+a);
 	});
 	public MutableLiveData<String> getTxtA(){
 		return txta;
