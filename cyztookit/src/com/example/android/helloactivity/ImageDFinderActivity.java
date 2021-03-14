@@ -92,13 +92,16 @@ public class ImageDFinderActivity extends AppCompatActivity{
         initView();
     }
     @Override
-    protected void onResume(){
-        super.onResume();
-        if(!hasPermission())return;
-        tv.setText(getLastPhotoByPath(this).toString());
-        ImageDFinder idf = new ImageDFinder(getBitmap(getLastPhotoByPath(this)));
-		tv.setCompoundDrawables(null,null,null,new BitmapDrawable(getResources(),idf.CompareVerticalSplit(370,1021,1049,637D/651D)));
-    }
+	    protected void onResume(){
+		    super.onResume();
+		    if(!hasPermission())return;
+		    ImageDFinder idf = new ImageDFinder(getBitmap(getLastPhotoByPath(this)));
+		    BitmapDrawable dra=new BitmapDrawable(getResources(),idf.CompareVerticalSplit(370,1021,1049,637D/651D));
+				    dra.setBounds( 0, 0, dra.getMinimumWidth(),dra.getMinimumHeight());
+				    tv.setText(getLastPhotoByPath(this).toString());
+				    tv.setCompoundDrawables(null,null,null,dra);
+
+	    }
 
     TextView tv;
     ImageView imgfinderImgView; 

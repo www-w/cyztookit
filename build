@@ -1,5 +1,5 @@
 #!/bin/bash
-git pull
+#git pull
 ./lint
 ./gradlew assemble
 cp cyztookit/build/outputs/apk/debug/cyztookit-debug.apk ..
